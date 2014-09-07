@@ -1,0 +1,15 @@
+compile w/ -g option
+$ g++ -g main.cpp -o test
+$ gdb ./test
+set a breakpoint
+$ b 52
+..where 52 is an arbitrary line #
+$ r
+...run the program
+It will move to the breakpoint.
+- step through per line w/ s
+- set further breakpoints b #
+- to continue to next breakpoint c
+- bypass functions n
+- print variable p vari_name
+- delete breakpoints $ delete

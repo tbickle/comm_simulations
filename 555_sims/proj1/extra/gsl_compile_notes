@@ -1,0 +1,7 @@
+Note: 1 method that works:
+$ gcc -static -Wall -o t test.c -lgsl -lgslcblas -lm
+$ ./t
+
+References:
+http://stackoverflow.com/questions/18588607/g-unable-to-link-libgsl
+http://www.gnu.org/software/gsl/manual/html_node/Shared-Libraries.html

@@ -1,0 +1,290 @@
+NOTE: This test is using the norm() fcn. Poor results. I will not be using this fcn anymore.
+
+Wed Feb 12 19:31:09 EST 2014
+
+********** 2-ary PAM **********
+max: 1
+Eb/N0 (dB): 0  err: 100  ns2: 1095  SER: 0.0913242
+Eb/N0 (dB): 1  err: 100  ns2: 1790  SER: 0.0558659
+Eb/N0 (dB): 2  err: 100  ns2: 2883  SER: 0.0346861
+Eb/N0 (dB): 3  err: 100  ns2: 5143  SER: 0.0194439
+Eb/N0 (dB): 4  err: 100  ns2: 8040  SER: 0.0124378
+Eb/N0 (dB): 5  err: 100  ns2: 16606  SER: 0.00602192
+Eb/N0 (dB): 6  err: 100  ns2: 44450  SER: 0.00224972
+Eb/N0 (dB): 7  err: 86  ns2: 100000  SER: 0.00086
+Eb/N0 (dB): 8  err: 26  ns2: 100000  SER: 0.00026
+Eb/N0 (dB): 9  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 10  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 11  err: 0  ns2: 100000  SER: 0
+
+********** 4-ary PAM **********
+max: 3
+Eb/N0 (dB): 0  err: 100  ns2: 218  SER: 0.458716
+Eb/N0 (dB): 1  err: 100  ns2: 221  SER: 0.452489
+Eb/N0 (dB): 2  err: 100  ns2: 237  SER: 0.421941
+Eb/N0 (dB): 3  err: 100  ns2: 283  SER: 0.353357
+Eb/N0 (dB): 4  err: 100  ns2: 305  SER: 0.327869
+Eb/N0 (dB): 5  err: 100  ns2: 387  SER: 0.258398
+Eb/N0 (dB): 6  err: 100  ns2: 372  SER: 0.268817
+Eb/N0 (dB): 7  err: 100  ns2: 514  SER: 0.194553
+Eb/N0 (dB): 8  err: 100  ns2: 603  SER: 0.165837
+Eb/N0 (dB): 9  err: 100  ns2: 708  SER: 0.141243
+Eb/N0 (dB): 10  err: 100  ns2: 905  SER: 0.110497
+Eb/N0 (dB): 11  err: 100  ns2: 1516  SER: 0.0659631
+Eb/N0 (dB): 12  err: 100  ns2: 2029  SER: 0.0492854
+Eb/N0 (dB): 13  err: 100  ns2: 4005  SER: 0.0249688
+Eb/N0 (dB): 14  err: 100  ns2: 7334  SER: 0.0136351
+Eb/N0 (dB): 15  err: 100  ns2: 18235  SER: 0.00548396
+Eb/N0 (dB): 16  err: 100  ns2: 53748  SER: 0.00186053
+Eb/N0 (dB): 17  err: 63  ns2: 100000  SER: 0.00063
+Eb/N0 (dB): 18  err: 19  ns2: 100000  SER: 0.00019
+Eb/N0 (dB): 19  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 20  err: 0  ns2: 100000  SER: 0
+
+********** 8-ary PAM **********
+max: 7
+Eb/N0 (dB): 0  err: 100  ns2: 140  SER: 0.714286
+Eb/N0 (dB): 1  err: 100  ns2: 141  SER: 0.70922
+Eb/N0 (dB): 2  err: 100  ns2: 133  SER: 0.75188
+Eb/N0 (dB): 3  err: 100  ns2: 142  SER: 0.704225
+Eb/N0 (dB): 4  err: 100  ns2: 145  SER: 0.689655
+Eb/N0 (dB): 5  err: 100  ns2: 186  SER: 0.537634
+Eb/N0 (dB): 6  err: 100  ns2: 187  SER: 0.534759
+Eb/N0 (dB): 7  err: 100  ns2: 183  SER: 0.546448
+Eb/N0 (dB): 8  err: 100  ns2: 194  SER: 0.515464
+Eb/N0 (dB): 9  err: 100  ns2: 184  SER: 0.543478
+Eb/N0 (dB): 10  err: 100  ns2: 234  SER: 0.42735
+Eb/N0 (dB): 11  err: 100  ns2: 262  SER: 0.381679
+Eb/N0 (dB): 12  err: 100  ns2: 278  SER: 0.359712
+Eb/N0 (dB): 13  err: 100  ns2: 309  SER: 0.323625
+Eb/N0 (dB): 14  err: 100  ns2: 395  SER: 0.253165
+Eb/N0 (dB): 15  err: 100  ns2: 458  SER: 0.218341
+Eb/N0 (dB): 16  err: 100  ns2: 588  SER: 0.170068
+Eb/N0 (dB): 17  err: 100  ns2: 711  SER: 0.140647
+Eb/N0 (dB): 18  err: 100  ns2: 1194  SER: 0.0837521
+Eb/N0 (dB): 19  err: 100  ns2: 1804  SER: 0.0554324
+Eb/N0 (dB): 20  err: 100  ns2: 3028  SER: 0.0330251
+Eb/N0 (dB): 21  err: 100  ns2: 4958  SER: 0.0201694
+Eb/N0 (dB): 22  err: 100  ns2: 10050  SER: 0.00995025
+Eb/N0 (dB): 23  err: 100  ns2: 24880  SER: 0.00401929
+Eb/N0 (dB): 24  err: 100  ns2: 95287  SER: 0.00104946
+Eb/N0 (dB): 25  err: 27  ns2: 100000  SER: 0.00027
+Eb/N0 (dB): 26  err: 7  ns2: 100000  SER: 7e-05
+Eb/N0 (dB): 27  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 28  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 29  err: 0  ns2: 100000  SER: 0
+
+********** 16-ary PAM **********
+max: 15
+Eb/N0 (dB): 0  err: 100  ns2: 114  SER: 0.877193
+Eb/N0 (dB): 1  err: 100  ns2: 116  SER: 0.862069
+Eb/N0 (dB): 2  err: 100  ns2: 111  SER: 0.900901
+Eb/N0 (dB): 3  err: 100  ns2: 111  SER: 0.900901
+Eb/N0 (dB): 4  err: 100  ns2: 119  SER: 0.840336
+Eb/N0 (dB): 5  err: 100  ns2: 123  SER: 0.813008
+Eb/N0 (dB): 6  err: 100  ns2: 122  SER: 0.819672
+Eb/N0 (dB): 7  err: 100  ns2: 142  SER: 0.704225
+Eb/N0 (dB): 8  err: 100  ns2: 141  SER: 0.70922
+Eb/N0 (dB): 9  err: 100  ns2: 140  SER: 0.714286
+Eb/N0 (dB): 10  err: 100  ns2: 142  SER: 0.704225
+Eb/N0 (dB): 11  err: 100  ns2: 147  SER: 0.680272
+Eb/N0 (dB): 12  err: 100  ns2: 153  SER: 0.653595
+Eb/N0 (dB): 13  err: 100  ns2: 144  SER: 0.694444
+Eb/N0 (dB): 14  err: 100  ns2: 174  SER: 0.574713
+Eb/N0 (dB): 15  err: 100  ns2: 185  SER: 0.540541
+Eb/N0 (dB): 16  err: 100  ns2: 188  SER: 0.531915
+Eb/N0 (dB): 17  err: 100  ns2: 215  SER: 0.465116
+Eb/N0 (dB): 18  err: 100  ns2: 242  SER: 0.413223
+Eb/N0 (dB): 19  err: 100  ns2: 254  SER: 0.393701
+Eb/N0 (dB): 20  err: 100  ns2: 320  SER: 0.3125
+Eb/N0 (dB): 21  err: 100  ns2: 381  SER: 0.262467
+Eb/N0 (dB): 22  err: 100  ns2: 414  SER: 0.241546
+Eb/N0 (dB): 23  err: 100  ns2: 566  SER: 0.176678
+Eb/N0 (dB): 24  err: 100  ns2: 798  SER: 0.125313
+Eb/N0 (dB): 25  err: 100  ns2: 1109  SER: 0.0901713
+Eb/N0 (dB): 26  err: 100  ns2: 2039  SER: 0.0490436
+Eb/N0 (dB): 27  err: 100  ns2: 2884  SER: 0.0346741
+Eb/N0 (dB): 28  err: 100  ns2: 6322  SER: 0.0158178
+Eb/N0 (dB): 29  err: 100  ns2: 11256  SER: 0.00888415
+Eb/N0 (dB): 30  err: 100  ns2: 39049  SER: 0.00256089
+Eb/N0 (dB): 31  err: 63  ns2: 100000  SER: 0.00063
+Eb/N0 (dB): 32  err: 13  ns2: 100000  SER: 0.00013
+Eb/N0 (dB): 33  err: 6  ns2: 100000  SER: 6e-05
+Eb/N0 (dB): 34  err: 0  ns2: 100000  SER: 0
+
+********** 2-ary PSK **********
+max: 1
+Eb/N0 (dB): 0  err: 100  ns2: 1327  SER: 0.075358
+Eb/N0 (dB): 1  err: 100  ns2: 1879  SER: 0.0532198
+Eb/N0 (dB): 2  err: 100  ns2: 2845  SER: 0.0351494
+Eb/N0 (dB): 3  err: 100  ns2: 5488  SER: 0.0182216
+Eb/N0 (dB): 4  err: 100  ns2: 9476  SER: 0.010553
+Eb/N0 (dB): 5  err: 100  ns2: 20029  SER: 0.00499276
+Eb/N0 (dB): 6  err: 100  ns2: 39858  SER: 0.00250891
+Eb/N0 (dB): 7  err: 77  ns2: 100000  SER: 0.00077
+Eb/N0 (dB): 8  err: 13  ns2: 100000  SER: 0.00013
+Eb/N0 (dB): 9  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 10  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 11  err: 0  ns2: 100000  SER: 0
+
+********** 4-ary PSK **********
+max: 1
+Eb/N0 (dB): 0  err: 100  ns2: 316  SER: 0.316456
+Eb/N0 (dB): 1  err: 100  ns2: 474  SER: 0.21097
+Eb/N0 (dB): 2  err: 100  ns2: 535  SER: 0.186916
+Eb/N0 (dB): 3  err: 100  ns2: 619  SER: 0.161551
+Eb/N0 (dB): 4  err: 100  ns2: 931  SER: 0.107411
+Eb/N0 (dB): 5  err: 100  ns2: 1276  SER: 0.0783699
+Eb/N0 (dB): 6  err: 100  ns2: 1786  SER: 0.055991
+Eb/N0 (dB): 7  err: 100  ns2: 3523  SER: 0.0283849
+Eb/N0 (dB): 8  err: 100  ns2: 8508  SER: 0.0117536
+Eb/N0 (dB): 9  err: 100  ns2: 20412  SER: 0.00489908
+Eb/N0 (dB): 10  err: 100  ns2: 73250  SER: 0.00136519
+Eb/N0 (dB): 11  err: 36  ns2: 100000  SER: 0.00036
+Eb/N0 (dB): 12  err: 5  ns2: 100000  SER: 5e-05
+Eb/N0 (dB): 13  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 14  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 15  err: 0  ns2: 100000  SER: 0
+
+********** 8-ary PSK **********
+max: 1
+Eb/N0 (dB): 0  err: 100  ns2: 164  SER: 0.609756
+Eb/N0 (dB): 1  err: 100  ns2: 205  SER: 0.487805
+Eb/N0 (dB): 2  err: 100  ns2: 183  SER: 0.546448
+Eb/N0 (dB): 3  err: 100  ns2: 220  SER: 0.454545
+Eb/N0 (dB): 4  err: 100  ns2: 236  SER: 0.423729
+Eb/N0 (dB): 5  err: 100  ns2: 310  SER: 0.322581
+Eb/N0 (dB): 6  err: 100  ns2: 349  SER: 0.286533
+Eb/N0 (dB): 7  err: 100  ns2: 446  SER: 0.224215
+Eb/N0 (dB): 8  err: 100  ns2: 596  SER: 0.167785
+Eb/N0 (dB): 9  err: 100  ns2: 774  SER: 0.129199
+Eb/N0 (dB): 10  err: 100  ns2: 1202  SER: 0.0831947
+Eb/N0 (dB): 11  err: 100  ns2: 1795  SER: 0.0557103
+Eb/N0 (dB): 12  err: 100  ns2: 2984  SER: 0.0335121
+Eb/N0 (dB): 13  err: 100  ns2: 6639  SER: 0.0150625
+Eb/N0 (dB): 14  err: 100  ns2: 15308  SER: 0.00653253
+Eb/N0 (dB): 15  err: 100  ns2: 44489  SER: 0.00224775
+Eb/N0 (dB): 16  err: 65  ns2: 100000  SER: 0.00065
+Eb/N0 (dB): 17  err: 14  ns2: 100000  SER: 0.00014
+Eb/N0 (dB): 18  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 19  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 20  err: 0  ns2: 100000  SER: 0
+
+********** 16-ary PSK **********
+max: 1
+Eb/N0 (dB): 0  err: 100  ns2: 134  SER: 0.746269
+Eb/N0 (dB): 1  err: 100  ns2: 139  SER: 0.719424
+Eb/N0 (dB): 2  err: 100  ns2: 164  SER: 0.609756
+Eb/N0 (dB): 3  err: 100  ns2: 138  SER: 0.724638
+Eb/N0 (dB): 4  err: 100  ns2: 150  SER: 0.666667
+Eb/N0 (dB): 5  err: 100  ns2: 163  SER: 0.613497
+Eb/N0 (dB): 6  err: 100  ns2: 165  SER: 0.606061
+Eb/N0 (dB): 7  err: 100  ns2: 189  SER: 0.529101
+Eb/N0 (dB): 8  err: 100  ns2: 196  SER: 0.510204
+Eb/N0 (dB): 9  err: 100  ns2: 207  SER: 0.483092
+Eb/N0 (dB): 10  err: 100  ns2: 235  SER: 0.425532
+Eb/N0 (dB): 11  err: 100  ns2: 269  SER: 0.371747
+Eb/N0 (dB): 12  err: 100  ns2: 341  SER: 0.293255
+Eb/N0 (dB): 13  err: 100  ns2: 389  SER: 0.257069
+Eb/N0 (dB): 14  err: 100  ns2: 625  SER: 0.16
+Eb/N0 (dB): 15  err: 100  ns2: 780  SER: 0.128205
+Eb/N0 (dB): 16  err: 100  ns2: 1316  SER: 0.0759878
+Eb/N0 (dB): 17  err: 100  ns2: 1790  SER: 0.0558659
+Eb/N0 (dB): 18  err: 100  ns2: 3567  SER: 0.0280348
+Eb/N0 (dB): 19  err: 100  ns2: 8077  SER: 0.0123808
+Eb/N0 (dB): 20  err: 100  ns2: 16482  SER: 0.00606722
+Eb/N0 (dB): 21  err: 100  ns2: 51982  SER: 0.00192374
+Eb/N0 (dB): 22  err: 60  ns2: 100000  SER: 0.0006
+Eb/N0 (dB): 23  err: 8  ns2: 100000  SER: 8e-05
+Eb/N0 (dB): 24  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 25  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 26  err: 0  ns2: 100000  SER: 0
+
+********** 2-ary QAM **********
+max: 1
+Eb/N0 (dB): 0  err: 100  ns2: 1202  SER: 0.0831947
+Eb/N0 (dB): 1  err: 100  ns2: 1477  SER: 0.0677048
+Eb/N0 (dB): 2  err: 100  ns2: 2828  SER: 0.0353607
+Eb/N0 (dB): 3  err: 100  ns2: 4410  SER: 0.0226757
+Eb/N0 (dB): 4  err: 100  ns2: 8032  SER: 0.0124502
+Eb/N0 (dB): 5  err: 100  ns2: 14073  SER: 0.00710581
+Eb/N0 (dB): 6  err: 100  ns2: 38295  SER: 0.00261131
+Eb/N0 (dB): 7  err: 81  ns2: 100000  SER: 0.00081
+Eb/N0 (dB): 8  err: 27  ns2: 100000  SER: 0.00027
+Eb/N0 (dB): 9  err: 2  ns2: 100000  SER: 2e-05
+Eb/N0 (dB): 10  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 11  err: 0  ns2: 100000  SER: 0
+
+********** 4-ary QAM **********
+max: 1
+Eb/N0 (dB): 0  err: 100  ns2: 359  SER: 0.278552
+Eb/N0 (dB): 1  err: 100  ns2: 406  SER: 0.246305
+Eb/N0 (dB): 2  err: 100  ns2: 612  SER: 0.163399
+Eb/N0 (dB): 3  err: 100  ns2: 765  SER: 0.130719
+Eb/N0 (dB): 4  err: 100  ns2: 868  SER: 0.115207
+Eb/N0 (dB): 5  err: 100  ns2: 1537  SER: 0.0650618
+Eb/N0 (dB): 6  err: 100  ns2: 2364  SER: 0.0423012
+Eb/N0 (dB): 7  err: 100  ns2: 4343  SER: 0.0230256
+Eb/N0 (dB): 8  err: 100  ns2: 6674  SER: 0.0149835
+Eb/N0 (dB): 9  err: 100  ns2: 20244  SER: 0.00493974
+Eb/N0 (dB): 10  err: 100  ns2: 65496  SER: 0.00152681
+Eb/N0 (dB): 11  err: 44  ns2: 100000  SER: 0.00044
+Eb/N0 (dB): 12  err: 5  ns2: 100000  SER: 5e-05
+Eb/N0 (dB): 13  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 14  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 15  err: 0  ns2: 100000  SER: 0
+
+********** 8-ary QAM **********
+max: 3.16228
+Eb/N0 (dB): 0  err: 100  ns2: 157  SER: 0.636943
+Eb/N0 (dB): 1  err: 100  ns2: 167  SER: 0.598802
+Eb/N0 (dB): 2  err: 100  ns2: 148  SER: 0.675676
+Eb/N0 (dB): 3  err: 100  ns2: 174  SER: 0.574713
+Eb/N0 (dB): 4  err: 100  ns2: 173  SER: 0.578035
+Eb/N0 (dB): 5  err: 100  ns2: 229  SER: 0.436681
+Eb/N0 (dB): 6  err: 100  ns2: 227  SER: 0.440529
+Eb/N0 (dB): 7  err: 100  ns2: 292  SER: 0.342466
+Eb/N0 (dB): 8  err: 100  ns2: 322  SER: 0.310559
+Eb/N0 (dB): 9  err: 100  ns2: 469  SER: 0.21322
+Eb/N0 (dB): 10  err: 100  ns2: 563  SER: 0.17762
+Eb/N0 (dB): 11  err: 100  ns2: 743  SER: 0.13459
+Eb/N0 (dB): 12  err: 100  ns2: 1052  SER: 0.095057
+Eb/N0 (dB): 13  err: 100  ns2: 1582  SER: 0.0632111
+Eb/N0 (dB): 14  err: 100  ns2: 3519  SER: 0.0284172
+Eb/N0 (dB): 15  err: 100  ns2: 5922  SER: 0.0168862
+Eb/N0 (dB): 16  err: 100  ns2: 20110  SER: 0.00497265
+Eb/N0 (dB): 17  err: 100  ns2: 46876  SER: 0.00213329
+Eb/N0 (dB): 18  err: 54  ns2: 100000  SER: 0.00054
+Eb/N0 (dB): 19  err: 5  ns2: 100000  SER: 5e-05
+Eb/N0 (dB): 20  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 21  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 22  err: 0  ns2: 100000  SER: 0
+
+********** 16-ary QAM **********
+max: 4.24264
+Eb/N0 (dB): 0  err: 100  ns2: 126  SER: 0.793651
+Eb/N0 (dB): 1  err: 100  ns2: 118  SER: 0.847458
+Eb/N0 (dB): 2  err: 100  ns2: 137  SER: 0.729927
+Eb/N0 (dB): 3  err: 100  ns2: 134  SER: 0.746269
+Eb/N0 (dB): 4  err: 100  ns2: 133  SER: 0.75188
+Eb/N0 (dB): 5  err: 100  ns2: 143  SER: 0.699301
+Eb/N0 (dB): 6  err: 100  ns2: 165  SER: 0.606061
+Eb/N0 (dB): 7  err: 100  ns2: 184  SER: 0.543478
+Eb/N0 (dB): 8  err: 100  ns2: 209  SER: 0.478469
+Eb/N0 (dB): 9  err: 100  ns2: 206  SER: 0.485437
+Eb/N0 (dB): 10  err: 100  ns2: 244  SER: 0.409836
+Eb/N0 (dB): 11  err: 100  ns2: 345  SER: 0.289855
+Eb/N0 (dB): 12  err: 100  ns2: 339  SER: 0.294985
+Eb/N0 (dB): 13  err: 100  ns2: 466  SER: 0.214592
+Eb/N0 (dB): 14  err: 100  ns2: 739  SER: 0.135318
+Eb/N0 (dB): 15  err: 100  ns2: 1212  SER: 0.0825083
+Eb/N0 (dB): 16  err: 100  ns2: 1911  SER: 0.0523286
+Eb/N0 (dB): 17  err: 100  ns2: 3603  SER: 0.0277546
+Eb/N0 (dB): 18  err: 100  ns2: 9954  SER: 0.0100462
+Eb/N0 (dB): 19  err: 100  ns2: 19318  SER: 0.00517652
+Eb/N0 (dB): 20  err: 100  ns2: 78195  SER: 0.00127885
+Eb/N0 (dB): 21  err: 29  ns2: 100000  SER: 0.00029
+Eb/N0 (dB): 22  err: 5  ns2: 100000  SER: 5e-05
+Eb/N0 (dB): 23  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 24  err: 0  ns2: 100000  SER: 0
+Eb/N0 (dB): 25  err: 0  ns2: 100000  SER: 0

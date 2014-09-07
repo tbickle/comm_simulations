@@ -1,0 +1,4 @@
+zz = moves current line to middle of screen
+'' = moves cursor to last position of modified text
+:set number = show line numbers
+:# = goto line#

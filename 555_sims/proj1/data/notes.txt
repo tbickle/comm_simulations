@@ -1,0 +1,5 @@
+ber3_plots_feb13.jpg: I believe the error here is caused by my not adding Gray Coding to the modulation scheme. Per [1], "For all cases, the function assumes the use of a Gray-coded signal constellation." Thus the references I'm plotting against ARE Gray Coded. Per [2], at the bottom of the document is an example of 8-ary PSK which looks very similar to my results.
+
+
+[1] http://www.mathworks.com/help/comm/ref/berawgn.html
+[2] http://mitpublications.org/yellow_images/1362027983_logo_File%204ec.pdf

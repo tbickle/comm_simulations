@@ -1,0 +1,1726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<title>1.9 — Header files « Learn C++</title>
+<link rel="shortcut icon" href="http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/favicon/learncpp.ico"><link rel="canonical" href="http://www.learncpp.com/cpp-tutorial/19-header-files/"><link rel="alternate" type="application/rss+xml" title="Learn C++ RSS Feed" href="http://www.learncpp.com/feed/">
+<link rel="alternate" type="application/atom+xml" title="Learn C++ Atom Feed" href="http://www.learncpp.com/feed/atom/">
+<link rel="pingback" href="http://www.learncpp.com/blog/xmlrpc.php">
+<link rel="alternate" type="application/rss+xml" title="Learn C++ » 1.9 — Header files Comments Feed" href="http://www.learncpp.com/cpp-tutorial/19-header-files/feed/">
+<script src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/l10n.js"></script>
+<script type="text/javascript" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/jquery.js"></script>
+<script type="text/javascript" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/comment-reply.js"></script>
+<script type="text/javascript" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/external-tracking.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.learncpp.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.learncpp.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="Learn C++" href="http://www.learncpp.com/">
+<link rel="start" title="Welcome to LearnCpp.com!" href="http://www.learncpp.com/site-news/this-is-a-news-test-post/">
+<link rel="prev" title="1.8 — Programs with multiple files" href="http://www.learncpp.com/cpp-tutorial/18-programs-with-multiple-files/">
+<link rel="next" title="1.10 — A first look at the preprocessor" href="http://www.learncpp.com/cpp-tutorial/110-a-first-look-at-the-preprocessor/">
+<link rel="canonical" href="http://www.learncpp.com/cpp-tutorial/19-header-files/">
+<link rel="shortlink" href="http://wp.me/pgtUW-w">
+<meta name="ROBOTS" content="INDEX">
+
+<!-- Powered by AdSense-Deluxe WordPress Plugin v0.8 - http://www.acmetech.com/blog/adsense-deluxe/ -->
+<!-- wpSolution Code -->
+        <script type="text/javascript">
+            function wpSolutionToggle(solution, link, showtext, hidetext) {
+                if (solution.style.display != 'none') {
+                    solution.style.display = 'none';
+                    link.innerHTML = showtext;
+                    link.className = 'solution_link_show';
+                } else {
+                    solution.style.display = 'block';
+                    link.innerHTML = hidetext;
+                    link.className = 'solution_link_hide';
+                }
+            }
+          </script>
+<style type="text/css">body{text-align:center;margin:0;padding:0;font-family:verdana,arial,sans-serif;font-size:13px;line-height:1.4;color:#000000;background:#ddd;padding-top:20px;padding-bottom:20px}a:link,a:visited,a:active{color:#365DA0;font-weight:bold;text-decoration:none;}a:hover{color:#365DA0;font-weight:bold;text-decoration:underline}ul,ol,dl,p,h1,h2,h3,h4,h5,h6{margin-top:10px;margin-bottom:10px;padding-top:0;padding-bottom:0;}ul ul,ul ol,ol ul,ol ol{margin-top:0;margin-bottom:0}code,pre{font-family:"Courier New",Courier,monospace;font-size:1em}pre{overflow:auto;word-wrap:normal;padding-bottom:1.5em;overflow-y:hidden;width:99%}abbr[title],acronym[title]{border-bottom:1px dotted}hr{display:block;height:2px;border:none;margin:0.5em auto;color:#cccccc;background-color:#cccccc}table{font-size:1em;}div.post,ul.commentlist li,ol.commentlist li{word-wrap:break-word;}pre,.wp_syntax{word-wrap:normal;}div#wrapper{text-align:center;margin-left:auto;margin-right:auto;display:block;width:98%}* html div#wrapper{<!--width:expression"98%");-->}div#container{padding:20px;background:#fff;box-shadow:0 0 15px #333;-moz-box-shadow:0 0 15px #333;padding-left:20px;padding-right:20px;width:auto;margin-left:auto;margin-right:auto;text-align:left;display:block}table#layout{font-size:100%;width:100%;table-layout:fixed}.colone{width:200px}.colone-inner{width:200px}.coltwo{width:100% }.colthree-inner{width:200px}.colthree{width:200px}td#header{width:auto;padding:0}table#logoarea,table#logoarea tr,table#logoarea td{margin:0;padding:0;background:none;border:0}table#logoarea{width:100%;border-spacing:0px}img.logo{display:block;margin:0 10px 0 0}td.logoarea-logo{width:1%}h1.blogtitle,h2.blogtitle{ display:block;margin:0;padding:0;letter-spacing:-1px;line-height:1.0em;font-size:200%;text-transform:uppercase;font-smooth:always}h1.blogtitle a:link,h1.blogtitle a:visited,h1.blogtitle a:active,h2.blogtitle a:link,h2.blogtitle a:visited,h2.blogtitle a:active{ text-decoration:none;color:#000000;font-weight:normal;font-smooth:always}h1.blogtitle a:hover,h2.blogtitle a:hover{ text-decoration:none;color:#AC161B;font-weight:normal}p.tagline{margin:0;padding:0;font-size:1.2em;font-weight:normal;color:#444}td.feed-icons{white-space:nowrap;}div.rss-box{height:1%;display:block;padding:10px 0 10px 10px;margin:0;width:280px}a.comments-icon{height:22px;line-height:22px;margin:0 5px 0 5px;padding-left:22px;display:block;text-decoration:none;float:right;white-space:nowrap}a.comments-icon:link,a.commentss-icon:active,a.comments-icon:visited{background:transparent url(http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/comment-gray.png) no-repeat scroll center left}a.comments-icon:hover{background:transparent url(http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/comment.png) no-repeat scroll center left}a.posts-icon{height:22px;line-height:22px;margin:0 5px 0 0;padding-left:20px;display:block;text-decoration:none;float:right;white-space:nowrap}a.posts-icon:link,a.posts-icon:active,a.posts-icon:visited{background:transparent url(http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/rss-gray.png) no-repeat scroll center left}a.posts-icon:hover{background:transparent url(http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/rss.png) no-repeat scroll center left}a.email-icon{height:22px;line-height:22px;margin:0 5px 0 5px;padding-left:24px;display:block;text-decoration:none;float:right;white-space:nowrap}a.email-icon:link,a.email-icon:active,a.email-icon:visited{background:transparent url(http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/email-gray.png) no-repeat scroll center left}a.email-icon:hover{background:transparent url(http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/email.png) no-repeat scroll center left}td.search-box{height:1%}div.searchbox{height:35px;border-bottom:0;width:200px;margin:0;padding:0}div.searchbox-form{margin:5px 10px 5px 10px}div.horbar1,div.horbar2{font-size:1px;clear:both;display:block;position:relative;padding:0;margin:0;width:100%;}div.horbar1{height:0px;background:#ffffff;border-top:dashed 1px #cccccc}div.horbar2{height:0px;background:#ffffff;border-bottom:dashed 1px #cccccc}div.header-image-container{position:relative;margin:0;padding:0;height:150px;}div.clickable{position:absolute;top:0;left:0;z-index:3;margin:0;padding:0;width:100%;height:150px;}a.divclick:link,a.divclick:visited,a.divclick:active,a.divclick:hover{width:100%;height:100%;display:block;text-decoration:none}td#left{vertical-align:top;padding-right:20px}td#left-inner{vertical-align:top;padding-right:10px}td#right{vertical-align:top;padding-left:20px}td#right-inner{vertical-align:top;padding-left:10px}td#middle{vertical-align:top;width:100%;padding:10px 15px}td#footer{width:auto;background-color:#f7f7f7;border-top:solid 4px #eee;padding:10px;text-align:center;color:#888;font-size:11px}td#footer a:link,td#footer a:visited,td#footer a:active{text-decoration:none;color:#777777;font-weight:normal}td#footer a:hover{text-decoration:none;color:#777777;font-weight:normal}div.widget{display:block;width:auto;font-size:12px;margin:0 0 10px 0;padding:10px;border:solid 4px #eee}div.widget-title{display:block;width:auto}div.widget-title h3,td#left h3.tw-widgettitle,td#right h3.tw-widgettitle,td#left ul.tw-nav-list,td#right ul.tw-nav-list{padding:0;margin:0;font-size:0.9em;text-align:center;font-weight:normal;text-transform:uppercase;letter-spacing:1px;color:#333;border-bottom:solid 1px #eee;padding-bottom:10px;margin-bottom:10px}div.widget ul,div.textwidget{display:block;width:auto}div.widget select{width:98%;margin-top:5px;}div.widget ul{list-style-type:none;margin:0;padding:0;width:auto}div.widget ul li{display:block;margin:2px 0 2px 0px;padding:0 0 0 0px;border-left:solid 0px #CCCCCC}div.widget ul li:hover,div.widget ul li.sfhover{display:block;width:auto;border-left:solid 0px #000000;}div.widget ul li ul li{margin:2px 0 2px 5px;padding:0 0 0 0px;border-left:solid 0px #CCCCCC;}div.widget ul li ul li:hover,div.widget ul li ul li.sfhover{border-left:solid 0px #000000;}div.widget ul li ul li ul li{margin:2px 0 2px 5px;padding:0 0 0 0px;border-left:solid 0px #CCCCCC;}div.widget ul li ul li ul li:hover,div.widget ul li ul li ul li.sfhover{border-left:solid 0px #000000;}div.widget td a:link,div.widget td a:visited,div.widget td a:active,div.widget ul li a:link,div.widget ul li a:visited,div.widget ul li a:active{text-decoration:none;font-weight:normal;color:#365DA0;font-weight:normal;}div.widget ul li ul li a:link,div.widget ul li ul li a:visited,div.widget ul li ul li a:active{color:#365DA0;font-weight:normal;}div.widget ul li ul li ul li a:link,div.widget ul li ul li ul li a:visited,div.widget ul li ul li ul li a:active{color:#365DA0;font-weight:normal;}div.widget ul li a:hover{color:#365DA0;}div.widget ul li ul li a:hover{color:#365DA0;}div.widget ul li ul li ul li a:hover{color:#365DA0;}div.widget ul li a:link,div.widget ul li a:visited,div.widget ul li a:active,div.widget ul li a:hover{display:inline}* html div.widget ul li a:link,* html div.widget ul li a:visited,* html div.widget ul li a:active,* html div.widget ul li a:hover{height:1%; } div.widget_pages ul li,div.widget_categories ul li{border-left:0 !important;padding:0 !important}div.widget_pages ul li a:link,div.widget_pages ul li a:visited,div.widget_pages ul li a:active,div.widget_categories ul li a:link,div.widget_categories ul li a:visited,div.widget_categories ul li a:active{padding:0 0 0 0px;border-left:solid 0px #CCCCCC}div.widget_pages ul li a:hover,div.widget_categories ul li a:hover{border-left:solid 0px #000000;}div.widget_pages ul li ul li a:link,div.widget_pages ul li ul li a:visited,div.widget_pages ul li ul li a:active,div.widget_categories ul li ul li a:link,div.widget_categories ul li ul li a:visited,div.widget_categories ul li ul li a:active{padding:0 0 0 0px;border-left:solid 0px #CCCCCC}div.widget_pages ul li ul li a:hover,div.widget_categories ul li ul li a:hover{border-left:solid 0px #000000;}div.widget_pages ul li ul li ul li a:link,div.widget_pages ul li ul li ul li a:visited,div.widget_pages ul li ul li ul li a:active,div.widget_categories ul li ul li ul li a:link,div.widget_categories ul li ul li ul li a:visited,div.widget_categories ul li ul li ul li a:active{padding:0 0 0 0px;border-left:solid 0px #CCCCCC}div.widget_pages ul li ul li ul li a:hover,div.widget_categories ul li ul li ul li a:hover{border-left:solid 0px #000000;}div.widget_pages ul li a:link,div.widget_pages ul li a:active,div.widget_pages ul li a:visited,div.widget_pages ul li a:hover{display:block !important}div.widget_categories ul li a:link,div.widget_categories ul li a:active,div.widget_categories ul li a:visited,div.widget_categories ul li a:hover{display:inline !important}table.subscribe{width:100%}table.subscribe td.email-text{padding:0 0 5px 0;vertical-align:top}table.subscribe td.email-field{padding:0;width:100%}table.subscribe td.email-button{padding:0 0 0 5px}table.subscribe td.post-text{padding:7px 0 0 0;vertical-align:top}table.subscribe td.comment-text{padding:7px 0 0 0;vertical-align:top}div.post,div.page{display:block;margin:0 0 30px 0;border-top:solid 4px #eee;padding-top:20px}div.sticky{background:#eee url('http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/sticky.gif') 99% 5% no-repeat;border:dashed 1px #cccccc;padding:10px}div.post-kicker{margin:0 0 5px 0}div.post-kicker a:link,div.post-kicker a:visited,div.post-kicker a:active{color:#999;text-decoration:none;text-transform:uppercase;letter-spacing:1px}div.post-kicker a:hover{color:#cc0000}div.post-headline{}div.post-headline h1,div.post-headline h2{ margin:0; padding:0;padding:0;margin:0;font-size:1.7em}div.post-headline h2 a:link,div.post-headline h2 a:visited,div.post-headline h2 a:active,div.post-headline h1 a:link,div.post-headline h1 a:visited,div.post-headline h1 a:active{}div.post-headline h2 a:hover,div.post-headline h1 a:hover{}div.post-byline{margin:5px 0 10px 0;color:#999;text-transform:uppercase;letter-spacing:1px;font-size:11px}div.post-byline a:link,div.post-byline a:visited,div.post-byline a:active{}div.post-byline a:hover{}div.post-bodycopy{}div.post-bodycopy p{margin:1em 0;padding:0;display:block}div.post-pagination{}div.post-footer{clear:both;display:block;color:#999;text-transform:uppercase;letter-spacing:1px;font-size:11px}div.post-footer a:link,div.post-footer a:visited,div.post-footer a:active{color:#999;font-weight:normal;text-decoration:none}div.post-footer a:hover{color:#333;font-weight:normal;text-decoration:underline}div.post-kicker img,div.post-byline img,div.post-footer img{border:0;padding:0;margin:0 0 -1px 0;background:none}span.post-ratings{display:inline-block;width:auto;white-space:nowrap}div.navigation-top{border-top:solid 4px #eee;padding:8px 0}div.navigation-middle{margin:10px 0 20px 0;padding:8px 0;border-top:solid 4px #eee;border-bottom:solid 4px #eee}div.navigation-bottom{margin:20px 0 0 0;padding:10px 0 0 0;border-top:solid 4px #eee}div.navigation-comments-above{margin:0 0 10px 0;padding:5px 0 5px 0}div.navigation-comments-below{margin:0 0 10px 0;padding:5px 0 5px 0}div.older{float:left;width:48%;text-align:left;margin:0;padding:0}div.newer{float:right;width:48%;text-align:right;margin:0;padding:0;}div.older-home{float:left;width:44%;text-align:left;margin:0;padding:0}div.newer-home{float:right;width:44%;text-align:right;margin:0;padding:0;}div.home{float:left;width:8%;text-align:center;margin:0;padding:0}form,.feedburner-email-form{margin:0;padding:0;}fieldset{border:1px solid #cccccc;width:auto;padding:0.35em 0.625em 0.75em;display:block;}legend{color:#000000;background:#f4f4f4;border:1px solid #cccccc;padding:2px 6px;margin-bottom:15px;}form p{margin:5px 0 0 0;padding:0;}div.xhtml-tags p{margin:0}label{margin-right:0.5em;font-family:arial;cursor:pointer;}input.text,input.textbox,input.password,input.file,input.TextField,textarea{padding:3px;color:#000000;border-top:solid 1px #333333;border-left:solid 1px #333333;border-right:solid 1px #999999;border-bottom:solid 1px #cccccc;background:url(http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/inputbackgr.gif) top left no-repeat}textarea{width:96%;}input.inputblur{color:#777777;width:95%}input.inputfocus{color:#000000;width:95%}input.highlight,textarea.highlight{background:#e8eff7;border-color:#37699f}.button,.Button{padding:0 2px;height:24px;line-height:16px;background-color:#777777;color:#ffffff;border:solid 2px #555555;font-weight:bold}.buttonhover{padding:0 2px;cursor:pointer;background-color:#6b9c6b;color:#ffffff;border:solid 2px #496d49}form#commentform input#submit{ padding:0 .25em; width:0; overflow:visible}form#commentform input#submit[class]{width:auto}form#commentform input#submit{padding:4px 10px 4px 10px;font-size:1.2em;line-height:1.5em;height:36px}table.searchform{width:100%}table.searchform td.searchfield{padding:0;width:100%}table.searchform td.searchbutton{padding:0 0 0 5px}table.searchform td.searchbutton input{padding:0 0 0 5px}blockquote{height:1%;display:block;clear:both;color:#555555;padding:1em 1em;background:#f4f4f4;border:solid 1px #e1e1e1}blockquote blockquote{height:1%;display:block;clear:both;color:#444444;padding:1em 1em;background:#e1e1e1;border:solid 1px #d3d3d3}div.post table{border-collapse:collapse;margin:10px 0}div.post table caption{width:auto;margin:0 auto;background:#eeeeee;border:#999999;padding:4px 8px;color:#666666}div.post table th{background:#888888;color:#ffffff;font-weight:bold;font-size:90%;padding:4px 8px;border:solid 1px #ffffff;text-align:left}div.post table td{padding:4px 8px;background-color:#ffffff;border-bottom:1px solid #dddddd;text-align:left}div.post table tfoot td{}div.post table tr.alt td{background:#f4f4f4}div.post table tr.over td{background:#e2e2e2}#calendar_wrap{padding:0;border:none}table#wp-calendar{width:100%;font-size:90%;border-collapse:collapse;background-color:#ffffff;margin:0 auto}table#wp-calendar caption{width:auto;background:#eeeeee;border:none;;padding:3px;margin:0 auto;font-size:1em}table#wp-calendar th{border:solid 1px #eeeeee;background-color:#999999;color:#ffffff;font-weight:bold;padding:2px;text-align:center}table#wp-calendar td{padding:0;line-height:18px;background-color:#ffffff;border:1px solid #dddddd;text-align:center}table#wp-calendar tfoot td{border:solid 1px #eeeeee;background-color:#eeeeee}table#wp-calendar td a{display:block;background-color:#eeeeee;width:100%;height:100%;padding:0}div#respond{margin:25px 0;padding:25px;background:#eee;-moz-border-radius:8px;-khtml-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;}p.thesetags{margin:10px 0}h3.reply{margin:0;padding:0 0 10px 0}ol.commentlist{margin:15px 0 25px 0;list-style-type:none;padding:0;display:block;border-top:dotted 1px #cccccc}ol.commentlist li{padding:15px 10px;display:block;height:1%;margin:0;background-color:#FFFFFF;border-bottom:dotted 1px #cccccc}ol.commentlist li.alt{display:block;height:1%;background-color:#EEEEEE;border-bottom:dotted 1px #cccccc}ol.commentlist li.authorcomment{display:block;height:1%;background-color:#D8D8FA}ol.commentlist span.authorname{font-weight:bold;font-size:110%}ol.commentlist span.commentdate{color:#666666;font-size:90%;margin-bottom:5px;display:block}ol.commentlist span.editcomment{display:block}ol.commentlist li p{margin:2px 0 5px 0}div.comment-number{float:right;font-size:2em;line-height:2em;font-family:georgia,serif;font-weight:bold;color:#ddd;margin:-10px 0 0 0;position:relative;height:1%}div.comment-number a:link,div.comment-number a:visited,div.comment-number a:active{color:#ccc}textarea#comment{width:98%;margin:10px 0;display:block}ul.commentlist{margin:15px 0 15px 0;list-style-type:none;padding:0;display:block;border-top:dotted 1px #cccccc}ul.commentlist ul{margin:0;border:none;list-style-type:none;padding:0}ul.commentlist li{padding:0; margin:0;display:block;clear:both;height:1%;}ul.commentlist ul.children li{ margin-left:30px}ul.commentlist div.comment-container{padding:10px;margin:0}ul.children div.comment-container{background-color:transparent;border:dotted 1px #ccc;padding:10px;margin:0 10px 8px 0; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px}ul.children div.bypostauthor{}ul.commentlist li.thread-even{background-color:#FFFFFF;border-bottom:dotted 1px #cccccc}ul.commentlist li.thread-odd{background-color:#EEEEEE;border-bottom:dotted 1px #cccccc}ul.commentlist div.bypostauthor{background-color:#D8D8FA}ul.children div.bypostauthor{border:dotted 1px #BFBCFB}ul.commentlist span.authorname{font-size:110%}div.comment-meta a:link,div.comment-meta a:visited,div.comment-meta a:active,div.comment-meta a:hover{font-weight:normal}div#cancel-comment-reply{margin:-5px 0 10px 0}div.comment-number{float:right;font-size:2em;line-height:2em;font-family:georgia,serif;font-weight:bold;color:#ddd;margin:-10px 0 0 0;position:relative;height:1%}div.comment-number a:link,div.comment-number a:visited,div.comment-number a:active{color:#ccc}.page-numbers{padding:2px 6px;border:solid 1px #000000;-moz-border-radius:6px;-khtml-border-radius:6px;-webkit-border-radius:6px;border-radius:6px}span.current{background:#ddd}a.prev,a.next{border:none}a.page-numbers:link,a.page-numbers:visited,a.page-numbers:active{text-decoration:none;color:#365DA0;border-color:#365DA0}a.page-numbers:hover{text-decoration:none;color:#365DA0;border-color:#365DA0}div.xhtml-tags{display:none}abbr em{border:none !important;border-top:dashed 1px #aaa !important;display:-moz-inline-box !important;display:inline-block !important;background:url(http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/commentluv.gif) 0% 90% no-repeat;margin-top:8px;padding:5px 5px 2px 20px !important;font-style:normal}p.subscribe-to-comments{margin-bottom:10px}div#gsHeader{display:none;}div.g2_column{margin:0 !important;width:100% !important;font-size:1.2em}div#gsNavBar{border-top-width:0 !important}p.giDescription{font-size:1.2em;line-height:1 !important}p.giTitle{margin:0.3em 0 !important;font-size:1em;font-weight:normal;color:#666}div#wp-email img{border:0;padding:0}div#wp-email input,div#wp-email textarea{margin-top:5px;margin-bottom:2px}div#wp-email p{margin-bottom:10px}input#wp-email-submit{ padding:0; font-size:30px; height:50px; line-height:50px; overflow:visible;}img.WP-EmailIcon{ vertical-align:text-bottom !important}.tw-accordion .tw-widgettitle,.tw-accordion .tw-widgettitle:hover,.tw-accordion .tw-hovered,.tw-accordion .selected,.tw-accordion .selected:hover{ background:transparent !important; background-image:none !important}.tw-accordion .tw-widgettitle span{ padding-left:0 !important}.tw-accordion h3.tw-widgettitle{border-bottom:solid 1px #ccc}.tw-accordion h3.selected{border-bottom:none}td#left .without_title,td#right .without_title{ margin-top:0;margin-bottom:0}ul.tw-nav-list{border-bottom:solid 1px #999;display:block;margin-bottom:5px !important}td#left ul.tw-nav-list li,td#right ul.tw-nav-list li{padding:0 0 1px 0;margin:0 0 -1px 5px; border:solid 1px #ccc;border-bottom:none;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-moz-border-radius-bottomright:0;-moz-border-radius-bottomleft:0;-webkit-border-bottom-right-radius:0;-webkit-border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0;background:#eee}td#left ul.tw-nav-list li.ui-tabs-selected,td#right ul.tw-nav-list li.ui-tabs-selected{ background:none;border:solid 1px #999;border-bottom:solid 1px #fff !important}ul.tw-nav-list li a:link,ul.tw-nav-list li a:visited,ul.tw-nav-list li a:active,ul.tw-nav-list li a:hover{padding:0 8px !important;background:none;border-left:none !important;outline:none}td#left ul.tw-nav-list li.ui-tabs-selected a,td#left li.ui-tabs-selected a:hover,td#right ul.tw-nav-list li.ui-tabs-selected a,td#right li.ui-tabs-selected a:hover{ color:#000000; text-decoration:none;font-weight:bold;background:none !important;outline:none}td#left .ui-tabs-panel,td#right .ui-tabs-panel{ margin:0; padding:0}img{border:0}#dbem-location-map img{ background:none !important}.post img{padding:5px;border:solid 1px #dddddd;background-color:#f3f3f3;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}.post img.size-full{max-width:96%;width:auto 100%;margin:5px 0 5px 0}div.post img[class~=size-full]{height:auto;}.post img.alignleft{float:left;margin:10px 10px 5px 0;}.post img.alignright{float:right;margin:10px 0 5px 10px;}.post img.aligncenter{display:block;margin:10px auto}.aligncenter,div.aligncenter{ display:block; margin-left:auto; margin-right:auto}.alignleft,div.alignleft{float:left;margin:10px 10px 5px 0}.alignright,div.alignright{ float:right; margin:10px 0 5px 10px}div.archives-page img{border:0;padding:0;background:none;margin-bottom:0;vertical-align:-10%}.wp-caption{max-width:96%;width:auto 100%;height:auto;display:block;border:1px solid #dddddd;text-align:center;background-color:#f3f3f3;padding-top:4px;margin:10px 0 0 0;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}* html .wp-caption{height:100%;}.wp-caption img{ margin:0 !important; padding:0 !important; border:0 none !important}.wp-caption p.wp-caption-text{font-size:0.8em;line-height:13px;padding:2px 4px 5px;margin:0;color:#666666}img.wp-post-image{float:left;border:0;padding:0;background:none;margin:0 10px 5px 0}img.wp-smiley{ float:none;border:none !important;margin:0 1px -1px 1px;padding:0 !important;background:none !important}img.avatar{float:left;display:block;margin:0 8px 1px 0;padding:3px;border:solid 1px #ddd;background-color:#f3f3f3;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}#comment_quicktags{text-align:left;padding:10px 0 2px 0;display:block}#comment_quicktags input.ed_button{background:#f4f4f4;border:2px solid #cccccc;color:#444444;margin:2px 4px 2px 0;width:auto;padding:0 4px;height:24px;line-height:16px}#comment_quicktags input.ed_button_hover{background:#dddddd;border:2px solid #666666;color:#000000;margin:2px 4px 2px 0;width:auto;padding:0 4px;height:24px;line-height:16px;cursor:pointer}#comment_quicktags #ed_strong{font-weight:bold}#comment_quicktags #ed_em{font-style:italic}@media print{body{background:white;color:black;margin:0;font-size:10pt !important;font-family:arial,sans-serif;}div.post-footer{line-height:normal !important;color:#555 !important;font-size:9pt !important}a:link,a:visited,a:active,a:hover{text-decoration:underline !important;color:#000}h2{color:#000;font-size:14pt !important;font-weight:normal !important}h3{color:#000;font-size:12pt !important;}#header,#footer,.colone,.colthree,.navigation,.navigation-top,.navigation-middle,.navigation-bottom,.wp-pagenavi-navigation,#comment,#respond,.remove-for-print{display:none}td#left,td#right,td#left-inner,td#right-inner{width:0}td#middle{width:100%}*:lang(en) td#left{ display:none}*:lang(en) td#right{ display:none}*:lang(en) td#left-inner{ display:none}*:lang(en) td#right-inner{ display:none}td#left:empty{ display:none}td#right:empty{ display:none}td#left-inner:empty{ display:none}td#right-inner:empty{ display:none}}ul.rMenu,ul.rMenu ul,ul.rMenu li,ul.rMenu a{display:block;margin:0;padding:0}ul.rMenu,ul.rMenu li,ul.rMenu ul{list-style:none}ul.rMenu ul{display:none}ul.rMenu li{position:relative;z-index:1}ul.rMenu li:hover{z-index:999}ul.rMenu li:hover > ul{display:block;position:absolute}ul.rMenu li:hover{background-position:0 0} ul.rMenu-hor li{float:left;width:auto}ul.rMenu-hRight li{float:right}ul.rMenu-ver li{float:none}.clearfix:after{ content:".";display:block;height:0;clear:both;visibility:hidden}.clearfix{min-width:0;display:inline-block;display:block}* html .clearfix{height:1%;}.clearboth{clear:both;height:1%;font-size:1%;line-height:1%;display:block;padding:0;margin:0}td#header{padding-bottom:15px;}td#middle{padding:0}div.searchbox-form{margin:5px 0 15px 5px}div#menu1 ul.rMenu{background:transparent;border:none}div#imagecontainer{border-top:solid 0px #333;border-bottom:solid 5px #333;}div.widget ul li{padding:1px 5px 1px 12px !important;background:url('http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/bullets/round-gray.gif') no-repeat 0 7px}ul.rMenu-hor ul,ul.rMenu-hRight ul{margin-top:0px;}ul.rMenu-hor li{margin-bottom:0px;margin-top:0px;margin-left:0px;}ul.rMenu-hor{padding-left:0px;}ul.rMenu-ver li{margin-top:0xp;}div#menu1 ul.rMenu li a,div#menu2 ul.rMenu li a{padding:6px 10px}div#menu1 ul.rMenu li{margin-right:5px}div#menu1 ul.rMenu li li{margin-right:0}div#menu1 ul.rMenu li,div#menu1 ul.rMenu li a{-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-radius-topleft:5px;-moz-border-radius-topright:5px;border-top-left-radius:5px;border-top-right-radius:5px}div#menu1 ul.rMenu li li,div#menu1 ul.rMenu li li a{-webkit-border-top-left-radius:0;-webkit-border-top-right-radius:0;-moz-border-radius-topleft:0;-moz-border-radius-topright:0;border-top-left-radius:0;border-top-right-radius:0}div#menu2{ border:dashed 1px #ffffff}ul{list-style-position:inside}</style>
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+
+/* JQUERY */
+jQuery(document).ready(function(){  
+
+
+	/* jQuery('ul#rmenu').superfish(); */
+	/* jQuery('ul#rmenu').superfish().find('ul').bgIframe({opacity:false}); */
+ 
+	/* For IE6 */
+	if (jQuery.browser.msie && /MSIE 6\.0/i.test(window.navigator.userAgent) && !/MSIE 7\.0/i.test(window.navigator.userAgent) && !/MSIE 8\.0/i.test(window.navigator.userAgent)) {
+
+		/* Max-width for images in IE6 */		
+		var centerwidth = jQuery("td#middle").width(); 
+		
+		/* Images without caption */
+		jQuery(".post img").each(function() { 
+			var maxwidth = centerwidth - 10 + 'px';
+			var imgwidth = jQuery(this).width(); 
+			var imgheight = jQuery(this).height(); 
+			var newimgheight = (centerwidth / imgwidth * imgheight) + 'px';	
+			if (imgwidth > centerwidth) { 
+				jQuery(this).css({width: maxwidth}); 
+				jQuery(this).css({height: newimgheight}); 
+			}
+		});
+		
+		/* Images with caption */
+		jQuery("div.wp-caption").each(function() { 
+			var captionwidth = jQuery(this).width(); 
+			var maxcaptionwidth = centerwidth + 'px';
+			var captionheight = jQuery(this).height();
+			var captionimgwidth =  jQuery("div.wp-caption img").width();
+			var captionimgheight =  jQuery("div.wp-caption img").height();
+			if (captionwidth > centerwidth) { 
+				jQuery(this).css({width: maxcaptionwidth}); 
+				var newcaptionheight = (centerwidth / captionwidth * captionheight) + 'px';
+				var newcaptionimgheight = (centerwidth / captionimgwidth * captionimgheight) + 'px';
+				jQuery(this).css({height: newcaptionheight}); 
+				jQuery("div.wp-caption img").css({height: newcaptionimgheight}); 
+				}
+		});
+		
+		/* sfhover for LI:HOVER support in IE6: */
+		jQuery("ul li").
+			hover( function() {
+					jQuery(this).addClass("sfhover")
+				}, 
+				function() {
+					jQuery(this).removeClass("sfhover")
+				} 
+			); 
+
+	/* End IE6 */
+	}
+	
+	jQuery(".post table tr").
+		mouseover(function() {
+			jQuery(this).addClass("over");
+		}).
+		mouseout(function() {
+			jQuery(this).removeClass("over");
+		});
+
+	
+	jQuery(".post table tr:even").
+		addClass("alt");
+
+	
+	jQuery("input.text, input.TextField, input.file, input.password, textarea").
+		focus(function () {  
+			jQuery(this).addClass("highlight"); 
+		}).
+		blur(function () { 
+			jQuery(this).removeClass("highlight"); 
+		})
+	
+	jQuery("input.inputblur").
+		focus(function () {  
+			jQuery(this).addClass("inputfocus"); 
+		}).
+		blur(function () { 
+			jQuery(this).removeClass("inputfocus"); 
+		})
+
+		
+
+	
+	jQuery("input.button, input.Button").
+		mouseover(function() {
+			jQuery(this).addClass("buttonhover");
+		}).
+		mouseout(function() {
+			jQuery(this).removeClass("buttonhover");
+		});
+
+	/* toggle "you can use these xhtml tags" */
+	jQuery("a.xhtmltags").
+		click(function(){ 
+			jQuery("div.xhtml-tags").slideToggle(300); 
+		});
+
+	/* For the Tabbed Widgets plugin: */
+	jQuery("ul.tw-nav-list").
+		addClass("clearfix");
+
+		
+	
+});
+
+//]]>
+</script>
+<link href="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/shCore.css" type="text/css" rel="stylesheet"><link href="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/shThemeDefault.css" type="text/css" rel="stylesheet"><meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3">
+<!-- Google Analytics Tracking by Google Analyticator 6.2: http://ronaldheft.com/code/analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-2173612-1']);
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_trackPageLoadTime']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://www.learncpp.com/blog/wp-content/themes/atahualpa353/js/DD_roundies.js"></script>
+<script type="text/javascript">DD_roundies.addRule('a.posts-icon, a.comments-icon, a.email-icon, img.logo');</script>
+<![endif]-->
+</head>
+<body class="single single-post postid-32 single-format-standard">
+<div id="wrapper">
+<div id="container">
+<table id="layout" border="0" cellpadding="0" cellspacing="0">
+<colgroup>
+<col class="colone"><col class="coltwo">
+<col class="colthree"></colgroup> 
+	<tbody><tr>
+
+		<!-- Header -->
+		<td id="header" colspan="3">
+
+		<div id="imagecontainer" class="header-image-container" style="background: url('http://www.learncpp.com/blog/wp-content/themes/atahualpa353/images/header/LearnCppHeader3_800.jpg') top center no-repeat;"><div class="clickable"><a class="divclick" title="Learn C++" href="http://www.learncpp.com/">&nbsp;</a></div></div>
+		</td>
+		<!-- / Header -->
+
+	</tr>
+
+	<!-- Main Body -->	
+	<tr id="bodyrow">
+
+				<!-- Left Sidebar -->
+		<td id="left">
+
+			<div id="text-5" class="widget widget_text"><div class="widget-title"><h3>Navigation</h3></div>			<div class="textwidget"><ul>
+<li><a href="http://www.learncpp.com/"><big><big>Main Page</big></big></a>
+</li><li><a href="http://www.learncpp.com/featured-articles/"><big><big>Featured Articles</big></big></a>
+</li></ul>
+<hr>
+<ul>
+<li><a href="http://www.learncpp.com/about/">About / Contact</a>
+</li><li><a href="http://www.learncpp.com/about/#Support">Support LearnCpp</a>
+</li></ul>
+<hr>
+
+<!-- SiteSearch Google -->
+<form method="get" action="http://www.google.com/custom" target="google_window">
+<table bgcolor="#ffffff" border="0">
+<tbody><tr><td align="left" nowrap="nowrap" valign="top">
+
+<!--<br/>-->
+<input name="domains" value="LearnCpp.com" type="hidden">
+<label for="sbi" style="display: none">Enter your search terms</label>
+<input name="q" size="20" maxlength="255" id="sbi" type="text">
+</td></tr>
+<tr>
+<td nowrap="nowrap">
+<table>
+<tbody><tr>
+<td>
+<input name="sitesearch" value="" id="ss0" type="radio">
+<label for="ss0" title="Search the Web"><font color="#000000" size="-1">Web</font></label></td>
+<td>
+<input name="sitesearch" value="www.LearnCpp.com" checked="checked" id="ss1" type="radio">
+<label for="ss1" title="Search LearnCpp.com"><font color="#000000" size="-1">LearnCpp</font></label></td>
+</tr>
+</tbody></table>
+<label for="sbb" style="display: none">Submit search form</label>
+<input name="sa" value="Google Search" id="sbb" type="submit">
+<input name="client" value="pub-0588844875925051" type="hidden">
+<input name="forid" value="1" type="hidden">
+<input name="channel" value="7774154974" type="hidden">
+<input name="ie" value="ISO-8859-1" type="hidden">
+<input name="oe" value="ISO-8859-1" type="hidden">
+<input name="safe" value="active" type="hidden">
+<input name="flav" value="0000" type="hidden">
+<input name="sig" value="q6fLrjobHHgL00cW" type="hidden">
+<input name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1" type="hidden">
+<input name="hl" value="en" type="hidden">
+</td></tr></tbody></table>
+</form>
+<!-- SiteSearch Google --></div>
+		</div><div id="meta-2" class="widget widget_meta"><div class="widget-title"><h3>Meta</h3></div>			<ul>
+			<li><a href="http://www.learncpp.com/blog/wp-login.php?action=register">Register</a></li>			<li><a href="http://www.learncpp.com/blog/wp-login.php">Log in</a></li>
+			<li><a href="http://www.learncpp.com/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.learncpp.com/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+</div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<div class="widget-title"><h3>Recent Posts</h3></div>		<ul>
+				<li><a href="http://www.learncpp.com/cpp-tutorial/b-6-new-virtual-function-controls-override-final-default-and-delete/" title="B.6 — New virtual function controls: override, final, default, and delete">B.6 — New virtual function controls: override, final, default, and delete</a></li>
+				<li><a href="http://www.learncpp.com/cpp-tutorial/b-5-delegating-constructors/" title="B.5 — Delegating constructors">B.5 — Delegating constructors</a></li>
+				<li><a href="http://www.learncpp.com/cpp-tutorial/b-4-initializer-lists-and-uniform-initialization/" title="B.4 — Initializer lists and uniform initialization">B.4 — Initializer lists and uniform initialization</a></li>
+				<li><a href="http://www.learncpp.com/cpp-tutorial/b-3-range-based-for-statements-and-static_assert/" title="B.3 — Range-based for statements and static_assert">B.3 — Range-based for statements and static_assert</a></li>
+				<li><a href="http://www.learncpp.com/cpp-tutorial/b-2-long-long-auto-decltype-nullptr-and-enum-classes/" title="B.2 — Long long, auto, decltype, nullptr, and enum classes">B.2 — Long long, auto, decltype, nullptr, and enum classes</a></li>
+				<li><a href="http://www.learncpp.com/cpp-tutorial/b-1-introduction-to-c11/" title="B.1 — Introduction to C++11">B.1 — Introduction to C++11</a></li>
+				<li><a href="http://www.learncpp.com/cpp-tutorial/a-6-fixed-width-integers/" title="A.6 — Fixed-width integers">A.6 — Fixed-width integers</a></li>
+				<li><a href="http://www.learncpp.com/site-news/site-software-updated-1123/" title="Site software updated 11/23">Site software updated 11/23</a></li>
+				<li><a href="http://www.learncpp.com/site-news/this-is-why-we-cant-have-nice-things-part-2/" title="This is why we can’t have nice things, part 2">This is why we can’t have nice things, part 2</a></li>
+				<li><a href="http://www.learncpp.com/site-news/this-is-why-we-cant-have-nice-things/" title="This is why we can’t have nice things">This is why we can’t have nice things</a></li>
+				</ul>
+		</div><div id="categories-1" class="widget widget_categories"><div class="widget-title"><h3>Category Indexes</h3></div>		<ul>
+	<li class="cat-item cat-item-11"><a href="http://www.learncpp.com/category/breaktime/" title="Games and fun activities">Break Time</a> (3)
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.learncpp.com/category/cpp-programming/" title="View all posts filed under C++ Programming">C++ Programming</a> (11)
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.learncpp.com/category/cpp-tutorial/" title="View all posts filed under C++ Tutorial">C++ Tutorial</a> (163)
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.learncpp.com/category/computer-game-programming/" title="View all posts filed under Game Programming">Game Programming</a> (4)
+</li>
+	<li class="cat-item cat-item-14"><a href="http://www.learncpp.com/category/gaming/" title="View all posts filed under Gaming">Gaming</a> (1)
+</li>
+	<li class="cat-item cat-item-13"><a href="http://www.learncpp.com/category/general-programming/" title="View all posts filed under General Programming">General Programming</a> (3)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.learncpp.com/category/site-news/" title="View all posts filed under Site News">Site News</a> (23)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://www.learncpp.com/category/wordpress/" title="View all posts filed under WordPress">WordPress</a> (8)
+</li>
+		</ul>
+</div>
+		</td>
+		<!-- / Left Sidebar -->
+		
+				
+
+		<!-- Main Column -->
+		<td id="middle">
+
+	
+
+		
+		 
+
+		<div class="clearfix navigation-top">
+		<div class="older">« <a href="http://www.learncpp.com/cpp-tutorial/18-programs-with-multiple-files/" rel="prev">1.8 — Programs with multiple files</a> &nbsp;</div><div class="newer">&nbsp; <a href="http://www.learncpp.com/cpp-tutorial/110-a-first-look-at-the-preprocessor/" rel="next">1.10 — A first look at the preprocessor</a> »</div></div>
+<div class="post-32 post type-post status-publish format-standard hentry category-cpp-tutorial" id="post-32">
+
+
+<div class="post-headline">		<h1>1.9 — Header files</h1>
+		</div>
+<div class="post-byline">By Alex, on June 3rd, 2007</div>
+<div class="post-bodycopy clearfix"><div style="float:left;padding:8px 8px 8px 0px;"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-0588844875925051";
+/* Content Page Top Large */
+google_ad_slot = "7945645163";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/show_ads.js">
+</script></div><p>Code files (with a .cpp extension) are not the only files commonly seen in programs.  The other type of file is called a <strong>header file</strong>, sometimes known as an <strong>include file</strong>.  Header files almost always have a .h extension.  The purpose of a header file is to hold declarations for other files to use.</p>
+<p><strong>Using standard library header files</strong></p>
+<p>Consider the following program:</p>
+<div><div id="highlighter_179352" class="syntaxhighlighter  cpp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;iostream&gt;</code></div><div class="line number2 index1 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">main()</code></div><div class="line number3 index2 alt2"><code class="cpp plain">{</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">using</code> <code class="cpp keyword bold">namespace</code> <code class="cpp plain">std;</code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">cout &lt;&lt; </code><code class="cpp string">"Hello, world!"</code> <code class="cpp plain">&lt;&lt; endl;</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div><div class="line number7 index6 alt2"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>This program prints “Hello, world!” to the console using cout.  
+However, our program never defines cout, so how does the compiler know 
+what cout is?  The answer is that cout has been declared in a header 
+file called “iostream”.  When we use the line <code>#include &lt;iostream&gt;</code>, we are telling the compiler to locate and then read all the declarations from a header file named “iostream”.</p>
+<p>Keep in mind that header files typically only contain declarations.  
+They do not define how something is implemented, and you already know 
+that your program won’t link if it can’t find the implementation of 
+something you use.  So if cout is only <em>defined</em> in the 
+“iostream” header file, where is it actually implemented?  It is 
+implemented in the runtime support library, which is automatically 
+linked into your program during the link phase.</p>
+<p><img src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/IncludeLibrary.png"></p>
+<p>A <strong>library</strong> is a package of code that is meant to be 
+reused in many programs.  Typically, a library includes a header file 
+that contains declarations for everything the library wishes to expose 
+(make public) to users, and a precompiled object that contains all of 
+the implementation code compiled into machine language.  These libraries
+ typically have a .lib or .dll extension on Windows, and a .a or .so 
+extension on Unix.  Why are libraries precompiled?  First, since 
+libraries rarely change, they do not need to be recompiled often, if 
+ever.  It would be a waste of time to compile them every time you wrote a
+ program that used them.  Second, because precompiled objects are in 
+machine language, it prevents people from accessing or changing the 
+source code, which is important to businesses or people who don’t want 
+to make their source code available for intellectual property reasons.  </p>
+<p><strong>Writing your own header files</strong></p>
+<p>Now let’s go back to the example we were discussing in the previous 
+lesson.  When we left off, we had two files, add.cpp and main.cpp, that 
+looked like this:</p>
+<p>add.cpp:</p>
+<div><div id="highlighter_136206" class="syntaxhighlighter  cpp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">add(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">x, </code><code class="cpp color1 bold">int</code> <code class="cpp plain">y)</code></div><div class="line number2 index1 alt1"><code class="cpp plain">{</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">x + y;</code></div><div class="line number4 index3 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>main.cpp:</p>
+<div><div id="highlighter_989601" class="syntaxhighlighter  cpp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;iostream&gt;</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">add(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">x, </code><code class="cpp color1 bold">int</code> <code class="cpp plain">y); </code><code class="cpp comments">// forward declaration using function prototype</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">main()</code></div><div class="line number6 index5 alt1"><code class="cpp plain">{</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">using</code> <code class="cpp keyword bold">namespace</code> <code class="cpp plain">std;</code></div><div class="line number8 index7 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">cout &lt;&lt; </code><code class="cpp string">"The sum of 3 and 4 is "</code> <code class="cpp plain">&lt;&lt; add(3, 4) &lt;&lt; endl;</code></div><div class="line number9 index8 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div><div class="line number10 index9 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>We’d used a forward declaration so that the compiler would know what 
+add was when compiling main.cpp.  As previously mentioned, writing 
+forward declarations for every function you want to use that lives in 
+another file can get tedious quickly.</p>
+<p>Header files can relieve us of this burden.  A header file only has 
+to be written once, and it can be included in as many files as needed.  
+This also helps with maintenance by minimizing the number of changes 
+that need to be made if a function prototype ever changes (eg. by adding
+ a new parameter).</p>
+<p>Writing our own header files is surprisingly easy.  Header files consist of two parts.  The first part is called a <strong>header guard</strong>, which is discussed in the next lesson (on the <a href="http://www.learncpp.com/cpp-tutorial/110-a-first-look-at-the-preprocessor/">preprocessor</a>).
+  The second part is the actual content of the .h file, which should be 
+the declarations for all of the functions we want other files to be able
+ to see.  Our header files should all have a .h extension, so we’ll call
+ our new header file add.h:</p>
+<p>add.h:</p>
+<div><div id="highlighter_849145" class="syntaxhighlighter  cpp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp preprocessor">#ifndef ADD_H</code></div><div class="line number2 index1 alt1"><code class="cpp preprocessor">#define ADD_H</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">add(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">x, </code><code class="cpp color1 bold">int</code> <code class="cpp plain">y); </code><code class="cpp comments">// function prototype for add.h</code></div><div class="line number5 index4 alt2">&nbsp;</div><div class="line number6 index5 alt1"><code class="cpp preprocessor">#endif</code></div></div></td></tr></tbody></table></div></div>
+<p>In order to use this header file in main.cpp, we have to include it.  Here is the new main.cpp:</p>
+<p>main.cpp that includes add.h:</p>
+<div><div id="highlighter_916899" class="syntaxhighlighter  cpp"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;iostream&gt;</code></div><div class="line number2 index1 alt1"><code class="cpp preprocessor">#include "add.h" // this brings in the declaration for add()</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">main()</code></div><div class="line number5 index4 alt2"><code class="cpp plain">{</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">using</code> <code class="cpp keyword bold">namespace</code> <code class="cpp plain">std;</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">cout &lt;&lt; </code><code class="cpp string">"The sum of 3 and 4 is "</code> <code class="cpp plain">&lt;&lt; add(3, 4) &lt;&lt; endl;</code></div><div class="line number8 index7 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div><div class="line number9 index8 alt2"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>When the compiler compiles the <code>#include "add.h"</code> line, it
+ copies the contents of add.h into the current file.  Because our add.h 
+contains a function prototype for add(), this prototype is now being 
+used as a forward declaration of add()!</p>
+<p>Consequently, our program will compile and link correctly.</p>
+<p><img src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/IncludeHeader.png"></p>
+<p>You’re probably curious why we use angled brackets for iostream, and 
+double quotes for add.h.  The answer is that angled brackets are used to
+ tell the compiler that we are including a header file that was included
+ with the compiler.  The double-quotes tell the compiler that this is a 
+header file we are supplying, which causes it to look for that header 
+file in the current directory containing our source code first.</p>
+<p><em>Rule: Use angled brackets to include header files that come with 
+the compiler.  Use double quotes to include any other header files.</em></p>
+<p>Another commonly asked question is “why doesn’t iostream have a .h 
+extension?”.  The answer is, because iostream.h is a different header 
+file than iostream is!  To explain requires a very short history lesson.</p>
+<p>When C++ was first created, all of the files in the standard runtime 
+library ended in .h.  Life was consistent, and it was good.  The 
+original version of cout and cin lived in iostream.h.  When the language
+ was standardized by the ANSI committee, they decided to move all of the
+ functions in the runtime library into the std namespace (which is 
+generally a good idea).  However, this presented a problem: if they 
+moved all the functions into the std namespace, none of the old programs
+ would work any more!</p>
+<p>To try to get around this issue and provide backwards compatibility 
+for older programs, a new set of header files was introduced that use 
+the same names but lack the .h extension.  These new header files have 
+all their functionality inside the std namespace.  This way, older 
+programs that include <code>#include &lt;iosteam.h&gt;</code> do not need to be rewritten, and newer programs can <code>#include &lt;iostream&gt;</code>.</p>
+<p>Make sure when you include a header file from the standard library 
+that you use the non .h version if it exists.  Otherwise you will be 
+using a deprecated version of the header that is no longer supported.</p>
+<p>As a side note, many headers in the standard library do not have a 
+non .h version, only a .h version.  For these files, it is fine to 
+include the .h version.  Many of these libraries are backwards 
+compatible with standard C programming, and C does not support 
+namespaces.  Consequently, the functionality of these libraries will not
+ be accessed through the std namespace.  Also, when you write your own 
+header files, they will all have a .h extension, since you will not be 
+putting your code in the std namespace.</p>
+<p><em>Rule: use the non .h version of a library if it exists, and 
+access the functionality through the std namespace.  If the non .h 
+version does not exist, or you are creating your own headers, use the .h
+ version</em></p>
+<p><strong>Header file best practices</strong></p>
+<p>Here are a few best practices for creating your own header files.</p>
+<ul>
+<li>Always include header guards.</li>
+<li>Do not declare variables in header files unless they are constants. 
+ Header files should generally only be used for declarations.</li>
+<li>Do not define functions in header files unless they are trivial.  Doing so makes your header files harder for humans to read.</li>
+<li>Each header file should have a specific job, and be as independent 
+as possible.  For example, you might put all your declarations related 
+to functionality A in A.h and all your declarations related to 
+functionality B in B.h.  That way if you only care about A later, you 
+can just include A.h and not get any of the stuff related to B.
+</li><li>Try to include as few other header files as possible in your header files.</li>
+</ul>
+<table border="0" cellpadding="3">
+<tbody><tr class="alt">
+<td>
+        <a href="http://www.learncpp.com/cpp-tutorial/110-a-first-look-at-the-preprocessor/" style="text-decoration:none"><img src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/next.png" align="middle"> 1.10 — A first look at the preprocessor</a>
+</td>
+</tr>
+<tr class="">
+<td>
+        <a href="http://www.learncpp.com/#Chapter1" style="text-decoration:none"><img src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/up.png" align="middle"> Index</a>
+</td>
+</tr>
+<tr class="alt">
+<td>
+        <a href="http://www.learncpp.com/cpp-tutorial/18-programs-with-multiple-files/" style="text-decoration:none"><img src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/prev.png" align="middle"> 1.8 — Programs with multiple files</a>
+</td>
+</tr>
+</tbody></table>
+<div style="padding-top:8px; padding-bottom:8px"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-0588844875925051";
+/* Content Page Bottom - Medium Rectangle */
+google_ad_slot = "2751429778";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/show_ads.js">
+</script>
+</div><!-- Powered by Ad Inserter Wordpress Plugin, Author: Igor Funa --></div>
+
+<div class="post-footer"><img src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/folder-gray.gif" alt=""> <a href="http://www.learncpp.com/category/cpp-tutorial/" title="View all posts in C++ Tutorial" rel="category tag">C++ Tutorial</a>   | <a href="http://www.learncpp.com/cpp-tutorial/19-header-files/print/" title="Print This Post" rel="nofollow"><img class="WP-PrintIcon" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/print.gif" alt="Print This Post" title="Print This Post" style="border: 0px;"></a>&nbsp;<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/print/" title="Print This Post" rel="nofollow">Print This Post</a></div>
+</div><!-- / Post -->						
+	
+	<div class="clearfix navigation-middle">
+		<div class="older">« <a href="http://www.learncpp.com/cpp-tutorial/18-programs-with-multiple-files/" rel="prev">1.8 — Programs with multiple files</a> &nbsp;</div><div class="newer">&nbsp; <a href="http://www.learncpp.com/cpp-tutorial/110-a-first-look-at-the-preprocessor/" rel="next">1.10 — A first look at the preprocessor</a> »</div></div>
+
+
+	<a name="comments"></a><!-- named anchor for skip links -->
+	<h3 id="comments">205 comments to 1.9 — Header files</h3>
+
+	<div class="clearfix navigation-comments-above"><a class="prev page-numbers" href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-2/#comments">« Older Comments</a>
+<a class="page-numbers" href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-1/#comments">1</a>
+<a class="page-numbers" href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-2/#comments">2</a>
+<span class="page-numbers current">3</span></div>
+	<!-- Comment List -->
+	<ul class="commentlist">
+		
+			<li class="comment byuser comment-author-mm even thread-even depth-1 clearfix" id="comment-96577">
+		<div id="div-comment-96577" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/a72043d94bb38860899c52369b0d810e.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">mm</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96577">
+		December 8, 2011 at 7:55 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Hi<br>
+I tried  to use the add() function in a Class.<br>
+But I got this error :<br>
+	error LNK2019: unresolved external symbol “public: int __thiscall 
+Class1::add(int,int)” (?add@Class1@@QAEHHH@Z) referenced in function 
+_main<br>
+	error LNK1120: 1 unresolved externals</p>
+<p>I am using Microsoft Visual Studio 2008. Created a win32 Console Application.</p>
+<p>I have put the 3 files below. Main.cpp Class1.cpp and Class1.h<br>
+There seems to be a problem Linking but I can not figure out why.<br>
+Thanks a lot for your help, greatly appreciate your help.</p>
+<p>FILE: MAIN.cpp_____________________________________________</p>
+<p>#include<br>
+#include<br>
+#include “Class1.h”<br>
+int main()<br>
+{<br>
+	Class1 c;<br>
+	int res=c.add(3, 4);<br>
+    return 0;<br>
+}<br>
+_____________________________________________<br>
+FILE: Class1.cpp_____________________________________________<br>
+#include </p>
+<p>	class Class1<br>
+	{<br>
+	public:<br>
+		int add(int x, int y)<br>
+		{<br>
+			return x + y;<br>
+		}<br>
+	};</p>
+<p>_____________________________________________<br>
+FILE:Class1.h_____________________________________________<br>
+#ifndef CLASS1_H<br>
+#define CLASS1_H  </p>
+<p>	class Class1<br>
+	{<br>
+	public:<br>
+		int add(int x, int y); // function prototype<br>
+	};</p>
+<p>#endif</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-nisbahmumtaz odd alt depth-2 clearfix" id="comment-96791">
+		<div id="div-comment-96791" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/bb7d8ae09f498217384d5f57b6187635.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">nisbahmumtaz</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96791">
+		January 6, 2012 at 4:37 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>What I did was change the content of “add.h” by adding:</p>
+<p>{<br>
+return x + y;<br>
+}</p>
+<p>This way, I didn’t even need the add.cpp and it compiled just fine.<br>
+I think this is a compatibility error on behalf of Alex, since this guide was made for C++03 originally.</p>
+		</div>
+</li>
+</ul>
+</li>
+		<li class="pingback even thread-odd thread-alt depth-1 clearfix" id="comment-96686">
+		<div id="div-comment-96686" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://4sharesite.com/?p=1438" rel="external nofollow" class="url">Programs with multiple files | 4sharesite</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96686">
+		December 18, 2011 at 5:08 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] Now, when the compiler is compiling main.cpp, it will know 
+what add is. Using this method, we can give files access to functions 
+that live in another file. However, as programs grow larger and larger, 
+it becomes tedious to have to forward declare every function you use 
+that lives in a different file. To solve that problem, the concept of 
+header files was introduced. We discuss header files in the lesson on 
+header files. [...]</p>
+		</div>
+</li>
+		<li class="pingback odd alt thread-even depth-1 clearfix" id="comment-96729">
+		<div id="div-comment-96729" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://kickasscomputing.wordpress.com/2011/12/23/1-8-programs-with-multiple-files/" rel="external nofollow" class="url">1.8 — Programs with multiple files « kickasscomputing</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96729">
+		December 23, 2011 at 12:21 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] Now, when the compiler is compiling main.cpp, it will know 
+what add is. Using this method, we can give files access to functions 
+that live in another file. However, as programs grow larger and larger, 
+it becomes tedious to have to forward declare every function you use 
+that lives in a different file. To solve that problem, the concept of 
+header files was introduced. We discuss header files in the lesson on 
+header files. [...]</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-coolguptas18 even thread-odd thread-alt depth-1 clearfix" id="comment-96779">
+		<div id="div-comment-96779" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/37b69e9710e669772a9da80b3fcd30e4.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Nitin</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96779">
+		January 1, 2012 at 11:38 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>amazing i find this website to be very helpful</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-wwilhelm odd alt thread-even depth-1 clearfix" id="comment-96862">
+		<div id="div-comment-96862" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/1db031dce9f01be750692045b2d39d89.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname"><a href="http://www.desktoponadime.com/" rel="external nofollow" class="url">Wayne Wilhelm</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96862">
+		January 20, 2012 at 4:47 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>The following source for<br>
+main.cpp, add.cpp and add.h<br>
+worked using Microsoft Visual C++ Express 2010</p>
+<p>I still don’t understand the first two lines in the add.h file.</p>
+<pre>#ifndef MATH_H</pre>
+<p>and</p>
+<pre>#define MATH_H</pre>
+<p>My first impression was “ifndef” was a typo of “define” with “MATH_H”
+ being a derivative of “math.h”. Apparently I’m wrong since it does in 
+fact work. I just don’t understand the where and how of those two lines 
+substance.</p>
+<pre>#define</pre>
+<p> makes sense</p>
+<pre>#ifndef</pre>
+<p> I don’t understand. It looks like “define” scrambled.</p>
+<pre>MATH_H</pre>
+<p> I don’t understand. “math.h” would seem to make more sense. I 
+surmise “MATH_H” is a Microsoft addon to the standard library though I 
+would think that would require an include statement, not a define.</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-wwilhelm even thread-odd thread-alt depth-1 clearfix" id="comment-96863">
+		<div id="div-comment-96863" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/1db031dce9f01be750692045b2d39d89.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname"><a href="http://www.desktoponadime.com/" rel="external nofollow" class="url">Wayne Wilhelm</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96863">
+		January 20, 2012 at 5:14 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>I see the next page, Section 1.10 has this to say:<br>
+To prevent this from happening, we use header guards, which are conditional compilation directives that take the following form:</p>
+<pre>#ifndef SOME_UNIQUE_NAME_HERE
+#define SOME_UNIQUE_NAME_HERE   
+
+// your declarations here   
+
+#endif
+</pre>
+<p>SO, the “MATH_H” is merely some unique name to ensure the particular 
+header file is not included more than once. I still don’t understand the
+ </p>
+<pre>#ifndef&lt;/PRE part though.</pre>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-wwilhelm odd alt depth-2 clearfix" id="comment-96865">
+		<div id="div-comment-96865" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/1db031dce9f01be750692045b2d39d89.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname"><a href="http://www.desktoponadime.com/" rel="external nofollow" class="url">Wayne Wilhelm</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96865">
+		January 20, 2012 at 11:16 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>I now understand.  The next page we go to (1.10) explained the
+</p><pre>#ifndef</pre>
+<p> term.  Essentially the entire header file is an IF statment.  Because the term MATH_H has to be unique, we ask
+</p><pre>#ifndef</pre>
+<p> if not defined then perform all of the statements after until the next
+</p><pre>#endif</pre>
+<p> end of if statment.</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-wwilhelm even depth-3 clearfix" id="comment-96866">
+		<div id="div-comment-96866" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/1db031dce9f01be750692045b2d39d89.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname"><a href="http://www.desktoponadime.com/" rel="external nofollow" class="url">Wayne Wilhelm</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96866">
+		January 20, 2012 at 11:18 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Guess I need to quit posting and just read on.  All will be explained in good time…  Sorry!</p>
+		</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+		<li class="comment byuser comment-author-deceit odd alt thread-even depth-1 clearfix" id="comment-96909">
+		<div id="div-comment-96909" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/15bb9504dc08aa078a6fda5c99396c0f.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Deceit</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96909">
+		February 5, 2012 at 10:36 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Ok I question first is the Header suppose to be made separate from 
+the .cpp? or is the header suppose to be included inside the .cpp?</p>
+<p>I’m using Visual studio  2010</p>
+<p>ok this is what I’ve been trying to do. I first start making a header
+ by going to File – New – File – Visual C++ – Header File C (.h)</p>
+<p>I input:</p>
+<p>#ifndef ADD_H<br>
+#define ADD_H</p>
+<p>int add(int x, int y); // function prototype for add.h</p>
+<p>#endif</p>
+<p>After that I save it as ADD_H</p>
+<p>After that I make a new .Cpp (File – New – Win32 Console Applications)</p>
+<p>then I input:</p>
+<p>#include<br>
+#include “stdafx.h”<br>
+#include “add.h” // this brings in the declaration for add()</p>
+<p>int main()<br>
+{<br>
+    using namespace std;<br>
+    cout &lt;&lt; "The sum of 3 and 4 is " &lt;&lt; add(3, 4) &lt;.&lt;</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-ashoenew even depth-2 clearfix" id="comment-96918">
+		<div id="div-comment-96918" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/74abc62ce8edd9758cfe6575fd675d15.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Ashoenew</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96918">
+		February 7, 2012 at 4:30 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>I take it you had the same prob I had did you come up with a link error or did it run fine? you didn’t specify</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-deceit odd alt depth-3 clearfix" id="comment-96920">
+		<div id="div-comment-96920" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/15bb9504dc08aa078a6fda5c99396c0f.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Deceit</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96920">
+		February 7, 2012 at 4:26 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Ok I understand wat I did wrong I didn’t the header file that I made into<br>
+to .cpp file that i’m using it for<br>
+BUT! everything said it was fine but… when I tried to complied with an fail… this is the error code</p>
+<p>1&gt;—— Build started: Project: Lesson1.9, Configuration: Debug Win32 ——<br>
+1&gt;  Lesson1.9.cpp<br>
+1&gt;c:\users\culex\documents\visual studio 
+2010\projects\lesson1.9\lesson1.9\add.h(5): error C2447: ‘{‘ : missing 
+function header (old-style formal list?)<br>
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========</p>
+<p>P.S. I wrote more on my original but.. it cutted it off…</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-deceit even depth-4 clearfix" id="comment-96921">
+		<div id="div-comment-96921" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/15bb9504dc08aa078a6fda5c99396c0f.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Deceit</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96921">
+		February 7, 2012 at 4:56 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Wooooo!!!! I understand what I did wrong and was able to compile it correctly ^^</p>
+		</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+		<li class="comment byuser comment-author-ashoenew odd alt thread-odd thread-alt depth-1 clearfix" id="comment-96915">
+		<div id="div-comment-96915" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/74abc62ce8edd9758cfe6575fd675d15.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Ashoenew</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96915">
+		February 7, 2012 at 4:23 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Ok so im using Microsoft visual c++ express 2010 and I followed the
+ instructions completely and I came up with a link error.? so any help? 
+here is what i have for add.h</p>
+<p>#ifndef ADD_H<br>
+#define ADD_H</p>
+<p>int add(int x, int y);</p>
+<p>#endif </p>
+<p>// this is what i have for  main.cpp</p>
+<p>#include “stdafx.h”<br>
+#include<br>
+#include “add.h”</p>
+<p>int main()<br>
+{<br>
+	using namespace std;<br>
+	cout &lt;&lt; "The sum of 3 and 4 is:" &lt;&lt; add(3,4) &lt;—— Build started: Project: add, Configuration: Debug Win32 ——<br>
+1&gt;  add.cpp<br>
+1&gt;add.obj : error LNK2019: unresolved external symbol “int __cdecl add(int,int)” (?add@@YAHHH@Z) referenced in function _main<br>
+1&gt;C:\Users\\add\Debug\add.exe : fatal error LNK1120: 1 unresolved externals<br>
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-ashoenew even depth-2 clearfix" id="comment-96916">
+		<div id="div-comment-96916" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/74abc62ce8edd9758cfe6575fd675d15.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Ashoenew</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96916">
+		February 7, 2012 at 4:25 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>i did finish the program it just didn’t post it all.</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-ashoenew odd alt depth-3 clearfix" id="comment-96917">
+		<div id="div-comment-96917" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/74abc62ce8edd9758cfe6575fd675d15.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Ashoenew</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96917">
+		February 7, 2012 at 4:27 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>what did i do wrong or why did i get a link error? thanks in advance. also thanks for being patient.</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-deceit even depth-4 clearfix" id="comment-96922">
+		<div id="div-comment-96922" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/15bb9504dc08aa078a6fda5c99396c0f.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Deceit</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96922">
+		February 7, 2012 at 5:43 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Ok… this is how to make header files on Microsoft Visual 2010 and insert it into your other projects</p>
+<p>Part1: First of all you’ll have to create a header file first go to </p>
+<p>File – </p>
+<p>New – </p>
+<p>File – </p>
+<p>Visual C++ – </p>
+<p>Header File – (The file will be named by itself but I recommend you 
+change it to the name you  want by going to save as)[Also there is no 
+need to add ".h" when naming it, it will be inserted by itself]{Also I 
+named my “add” so i’ll be using my name for example}</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-deceit odd alt depth-5 clearfix" id="comment-96923">
+		<div id="div-comment-96923" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/15bb9504dc08aa078a6fda5c99396c0f.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Deceit</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96923">
+		February 7, 2012 at 5:48 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Part 2</p>
+<p>Now to input the code<br>
+Like this:</p>
+<p>#ifndef ADD_H<br>
+#define ADD_H</p>
+<p>int add(int x, int y )<br>
+{<br>
+	return x + y;<br>
+}<br>
+#endif</p>
+<p>After that save and close project</p>
+<p>Part 3 Your Project</p>
+<p>Insert the code:</p>
+<p>// Lesson1.9.cpp : Defines the entry point for the console application.<br>
+//</p>
+<p>#include “stdafx.h”<br>
+#include<br>
+#include “add.h” // this brings in the declaration for add()</p>
+<p>int main()<br>
+{<br>
+    using namespace std;<br>
+    cout &lt;&lt; "The sum of 3 and 4 is " &lt;&lt; add(3, 4) &lt;&lt; endl;<br>
+    return 0;<br>
+}</p>
+<p>Save it and close</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-deceit even depth-6 clearfix" id="comment-96924">
+		<div id="div-comment-96924" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/15bb9504dc08aa078a6fda5c99396c0f.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Deceit</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96924">
+		February 7, 2012 at 6:32 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Part 4</p>
+<p>Now I suggest you start making a header folder for you header files</p>
+<p>Now find your header file and then copy</p>
+<p>After that find your project you just saved<br>
+{Good chance it will be where mine is}[Documents-Visual Studio 2010-Projects]</p>
+<p>After that enter your project and go to “Name of your project”<br>
+For example my project was named “Lesson 1.9″<br>
+{Projects- Lesson 1.9 – {When you see other head files insert it in there}</p>
+<p>Ok now open your “Project” and on the right of screen there should be “Solution Screen” and under Headers add your header</p>
+<p>AND BAM your done try running it if it doesn’t work all hope is lost for you.. I guess. Well I got mine to work :)</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-ashoenew odd alt depth-7 clearfix" id="comment-96926">
+		<div id="div-comment-96926" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/74abc62ce8edd9758cfe6575fd675d15.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Ashoenew</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96926">
+		February 8, 2012 at 12:10 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>That worked perfectly thanks!!!</p>
+		</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+		<li class="pingback even thread-even depth-1 clearfix" id="comment-96942">
+		<div id="div-comment-96942" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://programmingnotes.freeweq.com/?p=985" rel="external nofollow" class="url">Class – A Simple Calculator Implementation Using A Class, Enum List, Typedef &amp; Header Files | My Programming Notes</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96942">
+		February 11, 2012 at 8:07 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] KNOWLEDGE FOR THIS PROGRAM Header Files – How To Use Them 
+Class – Data Structure Enumerated List Typedef Do/While Loop Passing a 
+Value By Reference Constant [...]</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-sanusha odd alt thread-odd thread-alt depth-1 clearfix" id="comment-96992">
+		<div id="div-comment-96992" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/114d227138ff2d63a5b40600c2fb4ba3.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">sanusha</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-96992">
+		February 26, 2012 at 2:31 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>#include<br>
+#include<br>
+#include “Dll.h”<br>
+#include “guid.h”<br>
+ can u  say the meaning of these header files</p>
+		</div>
+</li>
+		<li class="pingback even thread-even depth-1 clearfix" id="comment-97187">
+		<div id="div-comment-97187" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://forum.codecall.net/c-c/44368-c-help.html#post329233" rel="external nofollow" class="url">C++ Help?</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-97187">
+		March 30, 2012 at 7:45 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...]  [...]</p>
+		</div>
+</li>
+		<li class="pingback odd alt thread-odd thread-alt depth-1 clearfix" id="comment-97244">
+		<div id="div-comment-97244" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://programmingnotes.freeweq.com/?p=1726" rel="external nofollow" class="url">C++ || Class – Roman Numeral To Integer &amp; Integer To Roman Numeral Conversion | My Programming Notes</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-97244">
+		April 10, 2012 at 7:33 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] KNOWLEDGE FOR THIS PROGRAM Header Files – How To Use Them 
+Class – What Is It? Do/While Loop Passing a Value By Reference Roman 
+Numerals – How Do You Convert [...]</p>
+		</div>
+</li>
+		<li class="pingback even thread-even depth-1 clearfix" id="comment-97292">
+		<div id="div-comment-97292" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://programmingnotes.freeweq.com/?p=1797" rel="external nofollow" class="url">C++ || Class &amp; Input/Output – Display The Contents Of A User Specified Text File To The Screen | My Programming Notes</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-97292">
+		April 24, 2012 at 11:54 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] KNOWLEDGE FOR THIS PROGRAM Header Files – How To Use Them 
+Class – What Is It? How To Read Data From A File String – Getline Array –
+ Cin.Getline Strcpy – Copy [...]</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-yuvadius odd alt thread-odd thread-alt depth-1 clearfix" id="comment-97586">
+		<div id="div-comment-97586" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/f960c56a38a13454d549a2e027f82df8.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">yuvadius</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-97586">
+		July 4, 2012 at 3:23 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>why would a header file include another header file?<br>
+arn’t you supose to just declare stuff in a header file.<br>
+in that case i don’t see why header file will even include another header file</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-artxworks even thread-even depth-1 clearfix" id="comment-97619">
+		<div id="div-comment-97619" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/1d3b58f1fdd3ad0171964e0413d51710.jpeg" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">artxworks</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-97619">
+		July 10, 2012 at 10:48 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>so add.cpp is still needed? since we don’t need to write the actual code in the header add.h ….</p>
+<p>#ifndef ADD_H_INCLUDED          // I don’t know why it has that “ADD_H_INCLUDED<br>
+#define ADD_H_INCLUDED          // same for this one and the #endif …. 
+can I change it to other names??? say ADD_H_WHATEVERIWANTHERE???</p>
+<p>int add(int x, int y);</p>
+<p>#endif // ADD_H_INCLUDED</p>
+<p>I tried it in Code::Blocks and it worked! XD</p>
+		</div>
+</li>
+		<li class="pingback odd alt thread-odd thread-alt depth-1 clearfix" id="comment-97843">
+		<div id="div-comment-97843" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://learntofish.wordpress.com/2012/10/06/tutorial-oop-in-c-part-2-class-and-object/" rel="external nofollow" class="url">Tutorial: OOP in C++ (Part 2 – Class and object) « Learntofish's Blog</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-97843">
+		October 6, 2012 at 8:51 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] – Line 01, 02 and 22 are part of the so-called “include 
+guard”. When C++ includes this header file the first time the name 
+PERSON_H is assigned to it. If you try to include this header file a 
+second time, which would result in an error, C++ checks if the name 
+PERSON_H already exists. Since PERSON_H already exists from the first 
+include, the header file is not included again which prevents an error. –
+ More on the include guard can be found here: learncpp [...]</p>
+		</div>
+</li>
+		<li class="pingback even thread-even depth-1 clearfix" id="comment-98007">
+		<div id="div-comment-98007" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://cplusplustutorials.com/index.php/1-8-programs-with-multiple-files/" rel="external nofollow" class="url">C++ Tutorials | 1.8 — Programs with multiple files</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-98007">
+		December 10, 2012 at 4:33 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] Now, when the compiler is compiling main.cpp, it will know 
+what add is. Using this method, we can give files access to functions 
+that live in another file. However, as programs grow larger and larger, 
+it becomes tedious to have to forward declare every function you use 
+that lives in a different file. To solve that problem, the concept of 
+header files was introduced. We discuss header files in the lesson on 
+header files. [...]</p>
+		</div>
+</li>
+		<li class="pingback odd alt thread-odd thread-alt depth-1 clearfix" id="comment-98127">
+		<div id="div-comment-98127" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://cplusplustutorials.com/index.php/8-9-class-code-and-header-files/" rel="external nofollow" class="url">C++ Tutorials 8.9 — Class code and header files | C++ Tutorials</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-98127">
+		January 26, 2013 at 5:47 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] the lesson on header files, you learned that you can put 
+functions inside header files in order to reuse them in multiple [...]</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-gu_obos even thread-even depth-1 clearfix" id="comment-98200">
+		<div id="div-comment-98200" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/769e311775669b2b3b11602f58b5ac57.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">gu_obos</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-98200">
+		February 23, 2013 at 6:06 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>As an FYI to anyone else having issues with Visual Studio 2012 and having issues with with building:</p>
+<p>If precompiled headers are turned on, you *must* have #include 
+“stdafx.h” as the first include. Otherwise your includes don’t work.</p>
+<p>See this link for more info:<br>
+<a href="http://en.wikipedia.org/wiki/Precompiled_header#stdafx.h" rel="nofollow">http://en.wikipedia.org/wiki/Precompiled_header#stdafx.h</a></p>
+		</div>
+</li>
+		<li class="pingback odd alt thread-odd thread-alt depth-1 clearfix" id="comment-98240">
+		<div id="div-comment-98240" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://hercles.wordpress.com/2013/03/13/c-for-beginners-part-8a-finishing-the-project/" rel="external nofollow" class="url">C++ for beginners, part 8a (finishing the project) | hercles</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-98240">
+		March 13, 2013 at 9:36 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] this does yet, but just have faith and keep compiling’. It’s tricky to explain, but more info here if [...]</p>
+		</div>
+</li>
+		<li class="pingback even thread-even depth-1 clearfix" id="comment-98342">
+		<div id="div-comment-98342" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://www.blogosfera.co.uk/2013/04/undefined-reference-error-in-a-very-very-simple-c-program/" rel="external nofollow" class="url">"undefined reference" error in a very very simple c++ program | BlogoSfera</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-98342">
+		April 3, 2013 at 7:49 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] have a simple program, which I copied exactly from the example in <a href="http://www.learncpp.com/cpp-tutorial/19-header-files/" rel="nofollow">http://www.learncpp.com/cpp-tutorial/19-header-files/</a> because I’m learning how to make c++ programs with multiple [...]</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-ashik odd alt thread-odd thread-alt depth-1 clearfix" id="comment-98617">
+		<div id="div-comment-98617" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/74939e23001be8b74a2b220ce869e519.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">ashik</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-98617">
+		April 29, 2013 at 9:01 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>add.cpp must contain the “add.h” header, otherwise the declaration wont be found, happened to me</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-ashik even depth-2 clearfix" id="comment-98618">
+		<div id="div-comment-98618" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/74939e23001be8b74a2b220ce869e519.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">ashik</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-98618">
+		April 29, 2013 at 11:26 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>the definition*</p>
+		</div>
+</li>
+</ul>
+</li>
+		<li class="comment byuser comment-author-xconwing odd alt thread-even depth-1 clearfix" id="comment-98915">
+		<div id="div-comment-98915" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/483d95da07644652720156f8e5d23067.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">xconwing</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-98915">
+		May 22, 2013 at 7:22 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Yea, having a compile error as well.  This is what I have in all three file.</p>
+<p>in main.cpp<br>
+////////////////////////<br>
+#include<br>
+#include “add.h”  // this brings in the declaration for add()<br>
+using namespace std;</p>
+<p>int main()<br>
+{<br>
+    cout &lt;&lt; "The sum of 3 and 4 is " &lt;&lt; add(3,4) &lt;&lt; endl;<br>
+    return 0;<br>
+}</p>
+<p>in add.cpp<br>
+////////////////////////<br>
+#include "add.h"</p>
+<p>int add(int x, int y)<br>
+{<br>
+    return x+y;<br>
+}</p>
+<p>in add.h<br>
+////////////////////////<br>
+#ifndef ADD_H<br>
+#define ADD_H</p>
+<p>int add(int x, int y);  // function prototype for add.h</p>
+<p>#endif</p>
+<p>Btw, I’m working with CodeBlock compiler and the error is:<br>
+undefined reference to ‘add(int, int)’ </p>
+<p>thanks<br>
+qL</p>
+		</div>
+</li>
+		<li class="pingback even thread-odd thread-alt depth-1 clearfix" id="comment-99652">
+		<div id="div-comment-99652" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://www.blogosfera.co.uk/2013/06/include-header-files-in-c/" rel="external nofollow" class="url">Include header files in c++ | BlogoSfera</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-99652">
+		June 13, 2013 at 7:46 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] The C++ Premier I have doesn’t say much about what I am about to ask, and this is what I got googling LINK: [...]</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-learner odd alt thread-even depth-1 clearfix" id="comment-101330">
+		<div id="div-comment-101330" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/2bb21c3cba0aa387ead754e6cf01c425.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">Learner</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-101330">
+		July 24, 2013 at 1:52 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>This is the best page so far! Ok, this is just the beggining of the
+ tutorial, but it explains things I always had curiosity about: “Why to 
+use header files?”, “Why the standard library is precompiled?”, “Why 
+standard header files don’t end in .h?”. I appreciate very much how the 
+topics are ordered and how the author answers all my doubts.</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-zingmars even depth-2 clearfix" id="comment-102796">
+		<div id="div-comment-102796" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/21b2deaaa0bcf172aa88051b6cf7ba1f.jpeg" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname"><a href="http://127.0.0.1/" rel="external nofollow" class="url">zingmars</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-102796">
+		August 19, 2013 at 5:32 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Why use header files – When you have 10k or more lines of code 
+having it in one file is a royal pain. You use header files to split 
+code between multiple files helping in both project management and code 
+readability.<br>
+Why is the standard library precompiled – The standard libs are large. 
+Thousands of lines of code large. You do not want to recompile it every 
+time you want to see whether your program works. That’s why they’re 
+precompiled.<br>
+Why standard header files don’t have the .h extension – some do. .h 
+extension is useless and only wastes your time when you have to write 
+it.</p>
+		</div>
+</li>
+</ul>
+</li>
+		<li class="comment byuser comment-author-roy17 odd alt thread-odd thread-alt depth-1 clearfix" id="comment-102243">
+		<div id="div-comment-102243" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/4a4ac150cf2df79f602fc94552e999f7.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">roy17</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-102243">
+		August 8, 2013 at 12:23 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>hi<br>
+i been trying to create a .h file and .cpp file<br>
+i was able to use these two file as the header in the same project where i have saved both .cpp and .h file<br>
+but i was not able to use in the different project<br>
+it shows a message “file not found”<br>
+by the way i am using Xcode</p>
+<p>when i use<br>
+ # include<br>
+# include “GradeBook.h”<br>
+using namespace std;<br>
+int main ()<br>
+{<br>
+    GradeBook gradeBook(“CS101 Introduction to C++ Programming”);<br>
+    GradeBook gradeBook1(“CS102 Introduction to C++ Programming”);<br>
+    cout&lt;&lt; "gradeBook created for 
+course:"&lt;&lt;gradeBook.getCourseName()&lt;&lt;"\n gradeBook1 creaded 
+for course:"&lt;&lt;gradeBook1.getCourseName()&lt;&lt;endl;</p>
+<p>    return 0;</p>
+<p>}</p>
+<p> in the same project where i have .h file </p>
+<p>#ifndef practice_of_the_header_GradeBook_h<br>
+#define practice_of_the_header_GradeBook_h<br>
+# include </p>
+<p>using namespace std;</p>
+<p>class GradeBook<br>
+{<br>
+public:<br>
+    // provide all the member function protype<br>
+    GradeBook (string);// this is a consturctor<br>
+    void setCourseName(string);<br>
+    string getCourseName();<br>
+    void displayMessage();</p>
+<p>private:<br>
+    string CourseName;</p>
+<p>};// the class of the Gra</p>
+<p>#endif</p>
+<p>and .cpp flie </p>
+<p># include<br>
+# include<br>
+#include “GradeBook.h”<br>
+using namespace std;<br>
+// constructor initialixes course Name with string supplies as argument<br>
+GradeBook::GradeBook(string name)<br>
+{<br>
+    setCourseName(name);</p>
+<p>}<br>
+// function to set the course name<br>
+void GradeBook::setCourseName(string name)<br>
+{<br>
+    CourseName=name;<br>
+}<br>
+string GradeBook:: getCourseName()<br>
+{<br>
+    return CourseName;</p>
+<p>}<br>
+void GradeBook::displayMessage()<br>
+{<br>
+    cout&lt;&lt;"Welcome to the grade book \n"&lt;&lt;getCourseName()&lt;&lt;"!"&lt;&lt;endl;<br>
+}</p>
+<p>i worked fine </p>
+<p>but when i created a new project<br>
+and try to use the same header it says file not found </p>
+<p># include<br>
+# include “GradeBook.h”  !GradeBook.h file not found<br>
+using namespace std;<br>
+int main ()<br>
+{<br>
+    GradeBook gradeBook(“CS101 Introduction to C++ Programming”);<br>
+    GradeBook gradeBook1(“CS102 Introduction to C++ Programming”);    
+cout&lt;&lt; "gradeBook created for 
+course:"&lt;&lt;gradeBook.getCourseName()&lt;&lt;"\n gradeBook1 creaded 
+for course:"&lt;&lt;gradeBook1.getCourseName()&lt;&lt;endl;</p>
+<p>    return 0;</p>
+<p>}</p>
+<p>can any one help me<br>
+thanks</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-zingmars even depth-2 clearfix" id="comment-102797">
+		<div id="div-comment-102797" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/21b2deaaa0bcf172aa88051b6cf7ba1f.jpeg" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname"><a href="http://127.0.0.1/" rel="external nofollow" class="url">zingmars</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-102797">
+		August 19, 2013 at 5:33 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Looks to be an issue with xcode. Are all the files in the same directory?</p>
+		</div>
+</li>
+</ul>
+</li>
+		<li class="pingback odd alt thread-even depth-1 clearfix" id="comment-102281">
+		<div id="div-comment-102281" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://www.tumbu.in/2013/08/10/1-8-programs-with-multiple-files/" rel="external nofollow" class="url">1.8 — Programs with multiple files | Tumbu</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-102281">
+		August 10, 2013 at 2:57 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] Now, when the compiler is compiling main.cpp, it will know 
+what add is. Using this method, we can give files access to functions 
+that live in another file. However, as programs grow larger and larger, 
+it becomes tedious to have to forward declare every function you use 
+that lives in a different file. To solve that problem, the concept of 
+header files was introduced. We discuss header files in the lesson 
+on&nbsp;header files. [...]</p>
+		</div>
+</li>
+		<li class="pingback even thread-odd thread-alt depth-1 clearfix" id="comment-102297">
+		<div id="div-comment-102297" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://www.tumbu.in/2013/08/10/8-9-class-code-and-header-files/" rel="external nofollow" class="url">8.9 — Class code and header files | Tumbu</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-102297">
+		August 10, 2013 at 5:02 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] the lesson on&nbsp;header files, you learned that you can put
+ functions inside header files in order to reuse them in multiple [...]</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-lopata odd alt thread-even depth-1 clearfix" id="comment-103538">
+		<div id="div-comment-103538" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/4036d5c20b7a39ded3ccfdaf3f265b55.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">lopata</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-103538">
+		August 26, 2013 at 4:38 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Now, i am mad with this tutorial. </p>
+<p>1st of all, please explaing with SIMPLE words what is this line suppose to do. </p>
+<p>#ifndef ADD_H<br>
+#define ADD_H          // Command to define header</p>
+<p>int add(int x, int y); // function prototype for add.h // definition</p>
+<p>#endif                 // end of defining. </p>
+<p>In my understanding this should create a header add.h and define it ? right or wrong.<br>
+If I want to do it manually, I can create add.h and define it my self, 
+so above stated example has no common sense in this world.<br>
+Defined add.h can look like this</p>
+<p>add.h<br>
+int add(int x, int y); // function prototype for add.h // definition<br>
+right or wrong?</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-alberto even thread-odd thread-alt depth-1 clearfix" id="comment-104062">
+		<div id="div-comment-104062" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/71557bc35507f256f42798865d0177c9.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname"><a href="http://www.albertodiprima.eu/" rel="external nofollow" class="url">alberto</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-104062">
+		September 4, 2013 at 12:57 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>fantastic source code!hi every body!</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-lilith odd alt thread-even depth-1 clearfix" id="comment-104526">
+		<div id="div-comment-104526" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/9572fd19e3a2e772271799f176459ab0.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">lilith</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-104526">
+		September 13, 2013 at 2:20 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Now I have created the header file and still get the same error:</p>
+<p>main.o: In function `main’:<br>
+main.cpp:(.text+0×14): undefined reference to `add(int, int)’<br>
+collect2: error: ld returned 1 exit status</p>
+<p>The compiler doesn’t find the add() function, neither with forward 
+declaration nor using a header file. My code is an exact copy of your 
+example and split in 3 files, main.cpp, add.cpp and add.h. Also, I have 
+put all three files in the same directory, it contains only those three 
+and nothing else.<br>
+Where am I going wrong?</p>
+		</div>
+<ul class="children">
+		<li class="comment byuser comment-author-lilith even depth-2 clearfix" id="comment-104527">
+		<div id="div-comment-104527" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/9572fd19e3a2e772271799f176459ab0.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">lilith</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-104527">
+		September 13, 2013 at 2:44 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Ok, I’ve solved my problem myself. It didn’t have anything to do 
+with the example code, but simply with my lack of knowledge of g++.</p>
+<p>For any of you running into the same problem:<br>
+%%%%%%%%%%%%%%%%%%%%<br>
+g++ -c main.cpp<br>
+g++ -c Complex.cpp<br>
+g++ main.o Complex.o<br>
+%%%%%%%%%%%%%%%%%%%<br>
+This does the trick. Next, if you check the contents of your source 
+file, you see an  executable named “a.out”, which you have to call 
+(“./a.out”) to run your code.<br>
+Everything peachy now, I finally can move on with this very helpful tutorial!</p>
+		</div>
+</li>
+</ul>
+</li>
+		<li class="pingback odd alt thread-odd thread-alt depth-1 clearfix" id="comment-108942">
+		<div id="div-comment-108942" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://askprogramming.com/65377/c-forward-declaration.html" rel="external nofollow" class="url">C++ – Forward declaration | Ask Programming &amp; Technology</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-108942">
+		November 4, 2013 at 2:59 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] At: <a href="http://www.learncpp.com/cpp-tutorial/19-header-files/" rel="nofollow">http://www.learncpp.com/cpp-tutorial/19-header-files/</a> [...]</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-theelephant even thread-even depth-1 clearfix" id="comment-113486">
+		<div id="div-comment-113486" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/e0fcc2694444f99f90e6da5d00ccf7ce.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">TheElephant</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-113486">
+		December 16, 2013 at 8:39 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Keep in mind that header files typically only contain declarations.
+ They do not define how something is implemented, and you already know 
+that your program won’t link if it can’t find the implementation of 
+something you use.</p>
+<p>#include<br>
+#include “add.h” // this brings in the declaration for add()</p>
+<p>int main()<br>
+{<br>
+    using namespace std;<br>
+    cout &lt;&lt; "The sum of 3 and 4 is " &lt;&lt; add(3, 4) &lt;&lt; endl;<br>
+    return 0;<br>
+}<br>
+int add(int x, int y)<br>
+{<br>
+    return x + y;<br>
+}<br>
+int add(int x, int y)<br>
+{<br>
+    return x + y;<br>
+}</p>
+		</div>
+</li>
+		<li class="comment byuser comment-author-theelephant odd alt thread-odd thread-alt depth-1 clearfix" id="comment-113487">
+		<div id="div-comment-113487" class="clearfix comment-container">
+		<div class="comment-author vcard">
+		<img alt="" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/e0fcc2694444f99f90e6da5d00ccf7ce.png" class="avatar avatar-65 photo" height="65" width="65">		<span class="authorname">TheElephant</span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-113487">
+		December 16, 2013 at 8:42 pm</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>Keep in mind that header files typically only contain declarations.
+ They do not define how something is implemented, and you already know 
+that your program won’t link if it can’t find the implementation of 
+something you use.</p>
+<p>#include<br>
+#include “add.h” // this brings in the declaration for add()</p>
+<p>int main()<br>
+{<br>
+    using namespace std;<br>
+    cout &lt;&lt; "The sum of 3 and 4 is " &lt;&lt; add(3, 4) &lt;&lt; endl;<br>
+    return 0;<br>
+}</p>
+<p>int add(int x, int y)<br>
+{<br>
+    return x + y;<br>
+}</p>
+		</div>
+</li>
+		<li class="pingback even thread-even depth-1 clearfix" id="comment-119402">
+		<div id="div-comment-119402" class="clearfix comment-container">
+		<div class="comment-author vcard">
+				<span class="authorname"><a href="http://www.copyquery.com/c-include-header-files/" rel="external nofollow" class="url">C++
+ include header filesCopyQuery CopyQuery | Question &amp; Answer Tool 
+for your Technical Queries,CopyQuery, ejjuit, query, copyquery, 
+copyquery.com, android doubt, ios question, sql query, sqlite query, 
+nodejsquery, dns query, update query, insert quer</a></span>
+		</div>
+				<div class="comment-meta commentmetadata">
+		<a href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-3/#comment-119402">
+		January 18, 2014 at 2:05 am</a>
+        <span class="comment-reply-link"><a rel="nofollow" class="comment-reply-login" href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">Log in to Reply</a></span>		 
+		</div>
+		<p>[...] });  I’m learning C++ and following this tutorial: <a href="http://www.learncpp.com/cpp-tutorial/19-header-files/" rel="nofollow">http://www.learncpp.com/cpp-tutorial/19-header-files/</a> They have named the header file that should be included to add, while I named mine [...]</p>
+		</div>
+</li>
+	
+	</ul>
+	<!-- / Comment List -->
+
+	<div class="clearfix navigation-comments-below"><a class="prev page-numbers" href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-2/#comments">« Older Comments</a>
+<a class="page-numbers" href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-1/#comments">1</a>
+<a class="page-numbers" href="http://www.learncpp.com/cpp-tutorial/19-header-files/comment-page-2/#comments">2</a>
+<span class="page-numbers current">3</span></div>
+
+
+
+	
+	<p>You must be <a href="http://www.learncpp.com/blog/wp-login.php?redirect_to=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F19-header-files%2F">logged in</a> to post a comment.</p>
+
+		
+
+<div class="clearfix navigation-bottom">
+		<div class="older">« <a href="http://www.learncpp.com/cpp-tutorial/18-programs-with-multiple-files/" rel="prev">1.8 — Programs with multiple files</a> &nbsp;</div><div class="newer">&nbsp; <a href="http://www.learncpp.com/cpp-tutorial/110-a-first-look-at-the-preprocessor/" rel="next">1.10 — A first look at the preprocessor</a> »</div></div>		
+			
+
+
+
+</td>
+<!-- / Main Column -->
+
+
+<!-- Right Sidebar -->
+<td id="right">
+
+	<div id="text-1" class="widget widget_text">			<div class="textwidget"><script type="text/javascript"><!--
+google_ad_client = "pub-0588844875925051";
+/* Wide Skyscraper Right Bar */
+google_ad_slot = "0955932809";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/show_ads.js">
+</script></div>
+		</div><div id="archives-2" class="widget widget_archive"><div class="widget-title"><h3>Archives</h3></div>		<ul>
+			<li><a href="http://www.learncpp.com/2011/11/" title="November 2011">November 2011</a></li>
+	<li><a href="http://www.learncpp.com/2011/10/" title="October 2011">October 2011</a></li>
+	<li><a href="http://www.learncpp.com/2011/09/" title="September 2011">September 2011</a></li>
+	<li><a href="http://www.learncpp.com/2010/10/" title="October 2010">October 2010</a></li>
+	<li><a href="http://www.learncpp.com/2010/07/" title="July 2010">July 2010</a></li>
+	<li><a href="http://www.learncpp.com/2009/10/" title="October 2009">October 2009</a></li>
+	<li><a href="http://www.learncpp.com/2009/09/" title="September 2009">September 2009</a></li>
+	<li><a href="http://www.learncpp.com/2009/03/" title="March 2009">March 2009</a></li>
+	<li><a href="http://www.learncpp.com/2008/12/" title="December 2008">December 2008</a></li>
+	<li><a href="http://www.learncpp.com/2008/10/" title="October 2008">October 2008</a></li>
+	<li><a href="http://www.learncpp.com/2008/09/" title="September 2008">September 2008</a></li>
+	<li><a href="http://www.learncpp.com/2008/08/" title="August 2008">August 2008</a></li>
+	<li><a href="http://www.learncpp.com/2008/06/" title="June 2008">June 2008</a></li>
+	<li><a href="http://www.learncpp.com/2008/05/" title="May 2008">May 2008</a></li>
+	<li><a href="http://www.learncpp.com/2008/04/" title="April 2008">April 2008</a></li>
+	<li><a href="http://www.learncpp.com/2008/03/" title="March 2008">March 2008</a></li>
+	<li><a href="http://www.learncpp.com/2008/02/" title="February 2008">February 2008</a></li>
+	<li><a href="http://www.learncpp.com/2008/01/" title="January 2008">January 2008</a></li>
+	<li><a href="http://www.learncpp.com/2007/12/" title="December 2007">December 2007</a></li>
+	<li><a href="http://www.learncpp.com/2007/11/" title="November 2007">November 2007</a></li>
+	<li><a href="http://www.learncpp.com/2007/10/" title="October 2007">October 2007</a></li>
+	<li><a href="http://www.learncpp.com/2007/09/" title="September 2007">September 2007</a></li>
+	<li><a href="http://www.learncpp.com/2007/08/" title="August 2007">August 2007</a></li>
+	<li><a href="http://www.learncpp.com/2007/07/" title="July 2007">July 2007</a></li>
+	<li><a href="http://www.learncpp.com/2007/06/" title="June 2007">June 2007</a></li>
+	<li><a href="http://www.learncpp.com/2007/05/" title="May 2007">May 2007</a></li>
+		</ul>
+</div>
+</td>
+<!-- / Right Sidebar -->
+
+</tr>
+<!-- / Main Body -->
+<tr>
+
+<!-- Footer -->
+<td id="footer" colspan="3">
+
+    <p>
+    Copyright © 2014 <a href="http://www.learncpp.com/">Learn C++</a> - All Rights Reserved<br>Powered by <a href="http://wordpress.org/">WordPress</a> &amp; the <a href="http://wordpress.bytesforall.com/" title="Customizable WordPress themes">Atahualpa Theme</a> by <a href="http://www.bytesforall.com/" title="BFA Webdesign">BytesForAll</a>. Discuss on our <a href="http://forum.bytesforall.com/" title="Atahualpa &amp; WordPress">WP Forum</a>    </p>
+    
+    
+    <script type="text/javascript" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/shCore.js"></script>
+<script type="text/javascript" src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/shBrushCpp.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://www.learncpp.com/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.83c";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://www.learncpp.com/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.83c";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<!--stats_footer_test--><script src="1.9%20%E2%80%94%20Header%20files%20%C2%AB%20Learn%20C++_files/e-201407.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({blog:'3928254',v:'ext',post:'32'});
+var load_cmc = function(){linktracker_init(3928254,32,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script>
+
+</td>
+<!-- / Footer -->
+
+</tr>
+</tbody></table><!-- / layout -->
+</div><!-- / container -->
+</div><!-- / wrapper -->
+
+
+
+
+
+</body></html>
+<!-- Dynamic page generated in 0.689 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-02-15 18:32:22 -->
+<!-- Compression = gzip -->

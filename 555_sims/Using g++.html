@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<!--J-term 1998 -->
+<title>Using g++</title>
+</head>
+<body>
+<h1>Using g++</h1>
+Most of this document was taken nearly verbatim from Paul Hilfinger.
+Any errors introduced, however, are David Wolfe's.
+
+<h2>Introduction</h2>
+GNU provides are a publicly-available
+optimizing compilers (translator) for C, C++, Ada 95, and Objective C that currently runs under various
+implementations of Unix (plus VMS as well as OS/2 and perhaps other
+PC systems) on a 
+variety of processors too numerous to mention.  You can find full
+documentation on-line under Emacs (use <code>C-h i</code> and select the
+``GCC'' menu option).  You don't need to know much about it for our
+purposes.  This document is a brief summary.
+
+(Note that <tt>g++</tt> and <tt>gcc</tt> are, for most practical
+purposes, identical programs.  Running <tt>g++</tt> is nearly the same
+as <tt>gcc -lg++</tt>.  Consequently, when looking at GNU's online
+documentation using Emacs info, <tt>gcc</tt> is where you'll look.)
+
+<h2>Running the compiler</h2>
+You can use <code>g++</code> both to compile programs into object modules and
+to link these object modules together into a single program.  It looks
+at the names of the files you give it to determine what language they
+are in and what to do with them.  Files of the form <code>name.cc</code>
+(or <code>name.cpp</code>) are assumed to be C++ files and files matching <code>name.o</code>
+are assumed to be object (i.e., machine-language) files.
+
+To translate a C++ source file, <code>file.cc</code>, into a corresponding
+object file, <code>file.o</code>, use the <code>g++</code> command:
+<pre>  g++ -c <i>compile-options</i> file.cc
+</pre>
+To link one or more object files, <code>file1.o</code>, <code>file2.o</code>,
+..., to produced from C++ files into a 
+single executable file called <code>prog</code>, use the
+following command:
+<pre>  g++ -o prog <i>link-options</i> file1.o file2.o ... <i>other-libraries</i>
+</pre>
+(The  <i>options</i> and <i>libraries</i> clauses are described below.)
+<p>
+You can bunch these two steps---compilation and linking---into one with the following command.
+</p><pre>  g++ -o prog <i>compile-and-link-options</i> file1.cc file2.cc ... <i>other-libraries</i>
+</pre>
+
+After linking has produced an executable file called prog, it becomes,
+in effect, a new Unix
+command, which you can run with
+<pre>  ./prog <i>arguments</i>
+</pre>
+where <i>arguments</i> denotes any command-line
+arguments to the program.  
+
+<h2>Libraries</h2>
+A <i>library</i> is a collection of object files that has been grouped
+together into a single file and indexed.  When the linking command
+encounters a library in its list of object files to link, it 
+looks to see if preceding object files contained calls to functions
+not yet defined that are defined in one of the library's object files.
+When it finds such a function, it then links in the appropriate object
+file from the library.  One library gets added to the list of
+libraries automatically, and provides a number of standard functions
+common to C++ and C.
+<p>
+Libraries are usually designated with an argument of the form
+<tt>-l</tt><i>library-name</i>.  In particular, <tt>-lg++</tt> denotes a
+library of standard C++ routines and  <tt>-lm</tt> denotes a library
+containing various mathematical routines (sine, cosine, arctan, square root, etc.)
+They must be listed <i>after</i> the object or source files that
+contain calls to their functions.
+
+</p><h2>Options</h2>
+The following compile- and link-options will be of particular interest
+to us.
+<dl>
+<p></p><dt><code>-c</code> (Compilation option)
+</dt><dd>	Compile only.  Produces <code>.o</code> files from source files
+	without doing any linking.  
+
+<p></p></dd><dt><code>-D</code><i>name</i>=<i>value</i> (Compilation option)
+</dt><dd>	In the program being compiled, define <i>name</i> as if there
+were a line
+<pre>  #define <i>name</i>  <i>value</i>
+</pre>
+at the beginning of the program.  The `<code> = <i>value</i></code>' part
+may be left off, in which case <i>value</i> defaults to 1.  
+
+<p></p></dd><dt><code>-o</code> <i>file-name</i> (Link option, usually)
+</dt><dd>
+Use <i>file-name</i> as the name of the file produced by <code>g++</code>
+(usually, this is an executable file). 
+
+<p></p></dd><dt><code>-l</code><i>library-name</i> (Link option) 
+</dt><dd>
+Link in the specified library. See above.  (Link option).
+
+<p></p></dd><dt><code>-g</code> (Compilation and link option) 
+</dt><dd>
+Put  debugging information for <code>gdb</code> into the object or executable
+file.  Should be specified for 
+<i>both</i> compilation and linking.
+
+<p></p></dd><dt><code>-MM</code> (Compilation option) 
+</dt><dd>
+Print the header files (other than standard headers) used by each
+source file in a format acceptable to <code>make</code>.
+Don't produce a <code>.o</code> file or an executable.
+
+<p></p></dd><dt><code>-pg</code> (Compilation and link option) 
+</dt><dd>
+Put profiling instructions for generating profiling information for
+<code>gprof</code> into the object or 
+executable file.  Should be specified for <i>both</i> compilation or
+linking.  <i>Profiling</i> is the process of measuring how long
+various portions of your program take to execute.  When you specify
+<code>-pg</code>, the resulting executable program, when run, will produce a
+file of statistics.  A program called <code>gprof</code> will then produce a
+listing from that file telling how much time was spent executing each
+function.  
+
+<p></p></dd><dt><code>-Wall</code> (Compilation option) 
+</dt><dd>
+Produce warning messages about a number of things that are legal but
+dubious.  I strongly suggest that you <i>always</i> specify this and
+that you treat every warning as an error to be fixed.
+</dd></dl>
+
+
+</body></html>

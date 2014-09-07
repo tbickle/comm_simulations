@@ -1,0 +1,13 @@
+refer to homepages.gac.edu/~mc38/2001J/documentation/g++.html
+and
+www.learncpp.com/cpp_tutorial/19-header-files/
+
+.o files are "precompiled" code that doesn't change often. Thus, it can be
+precompiled and already expressed in machine language (binary). A linker
+pulls together all the various compiled codes and creates an executable.
+
+To compile, simply:
+g++ -c -options file.cc (or file.cpp)
+
+To link:
+g++ -o prog_name -options file1.o file2.o ... -other_libraries

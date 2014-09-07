@@ -1,0 +1,3 @@
+* M-ary Modulation Bounds = Nmin/MQ(dmin/sqrt(2N0))<Pe<(M-1)Q(dmin/sqrt(2N0)) <- LB is suspect
+* try true normalization vs rms normalization
+* decimal-to-binary, binary-to-decimal conversions

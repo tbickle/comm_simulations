@@ -1,0 +1,125 @@
+NOTE:	This test shows, for some reason, 4,8,16-ary PSK and QAM 
+	does not produce errors below 100. This creates a lack of
+	precision. The err value is always either 0 or 100 in
+	these scenarios.
+
+Wed Feb 12 15:01:03 EST 2014
+
+********** 2-ary PAM **********
+Eb/N0 (dB): 0  err: 100  ns2: 593  SER: 0.168634
+Eb/N0 (dB): 1  err: 100  ns2: 826  SER: 0.121065
+Eb/N0 (dB): 2  err: 100  ns2: 1809  SER: 0.0552792
+Eb/N0 (dB): 3  err: 100  ns2: 4111  SER: 0.024325
+Eb/N0 (dB): 4  err: 100  ns2: 14733  SER: 0.00678748
+Eb/N0 (dB): 5  err: 71  ns2: 100000  SER: 0.00071
+Eb/N0 (dB): 6  err: 4  ns2: 100000  SER: 4e-05
+Eb/N0 (dB): 7  err: 0  ns2: 100000  SER: 0
+SER: 0.168634 0.121065 0.0552792 0.024325 0.00678748 0.00071 4e-05 0 0 0 
+
+
+********** 4-ary PAM **********
+Eb/N0 (dB): 0  err: 100  ns2: 181  SER: 0.552486
+Eb/N0 (dB): 1  err: 100  ns2: 272  SER: 0.367647
+Eb/N0 (dB): 2  err: 100  ns2: 520  SER: 0.192308
+Eb/N0 (dB): 3  err: 100  ns2: 1873  SER: 0.0533903
+Eb/N0 (dB): 4  err: 100  ns2: 31877  SER: 0.00313706
+Eb/N0 (dB): 5  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 6  err: 0  ns2: 100000  SER: 0
+SER: 0.552486 0.367647 0.192308 0.0533903 0.00313706 1e-05 0 0 0 0 
+
+
+********** 8-ary PAM **********
+Eb/N0 (dB): 0  err: 100  ns2: 135  SER: 0.740741
+Eb/N0 (dB): 1  err: 100  ns2: 154  SER: 0.649351
+Eb/N0 (dB): 2  err: 100  ns2: 279  SER: 0.358423
+Eb/N0 (dB): 3  err: 100  ns2: 1358  SER: 0.0736377
+Eb/N0 (dB): 4  err: 48  ns2: 100000  SER: 0.00048
+Eb/N0 (dB): 5  err: 0  ns2: 100000  SER: 0
+SER: 0.740741 0.649351 0.358423 0.0736377 0.00048 0 0 0 0 0 
+
+
+********** 16-ary PAM **********
+Eb/N0 (dB): 0  err: 100  ns2: 117  SER: 0.854701
+Eb/N0 (dB): 1  err: 100  ns2: 122  SER: 0.819672
+Eb/N0 (dB): 2  err: 100  ns2: 214  SER: 0.46729
+Eb/N0 (dB): 3  err: 100  ns2: 1203  SER: 0.0831255
+Eb/N0 (dB): 4  err: 1  ns2: 100000  SER: 1e-05
+Eb/N0 (dB): 5  err: 0  ns2: 100000  SER: 0
+SER: 0.854701 0.819672 0.46729 0.0831255 1e-05 0 0 0 0 0 
+
+
+********** 2-ary PSK **********
+Eb/N0 (dB): 0  err: 100  ns2: 562  SER: 0.177936
+Eb/N0 (dB): 1  err: 100  ns2: 1016  SER: 0.0984252
+Eb/N0 (dB): 2  err: 100  ns2: 1603  SER: 0.062383
+Eb/N0 (dB): 3  err: 100  ns2: 4357  SER: 0.0229516
+Eb/N0 (dB): 4  err: 100  ns2: 16929  SER: 0.00590702
+Eb/N0 (dB): 5  err: 67  ns2: 100000  SER: 0.00067
+Eb/N0 (dB): 6  err: 5  ns2: 100000  SER: 5e-05
+Eb/N0 (dB): 7  err: 0  ns2: 100000  SER: 0
+SER: 0.177936 0.0984252 0.062383 0.0229516 0.00590702 0.00067 5e-05 0 0 0 
+
+
+********** 4-ary PSK **********
+Eb/N0 (dB): 0  err: 100  ns2: 221  SER: 0.452489
+Eb/N0 (dB): 1  err: 100  ns2: 423  SER: 0.236407
+Eb/N0 (dB): 2  err: 100  ns2: 1253  SER: 0.0798085
+Eb/N0 (dB): 3  err: 100  ns2: 18656  SER: 0.00536021
+Eb/N0 (dB): 4  err: 0  ns2: 100000  SER: 0
+SER: 0.452489 0.236407 0.0798085 0.00536021 0 0 0 0 0 0 
+
+
+********** 8-ary PSK **********
+Eb/N0 (dB): 0  err: 100  ns2: 144  SER: 0.694444
+Eb/N0 (dB): 1  err: 100  ns2: 203  SER: 0.492611
+Eb/N0 (dB): 2  err: 100  ns2: 725  SER: 0.137931
+Eb/N0 (dB): 3  err: 100  ns2: 39425  SER: 0.00253646
+Eb/N0 (dB): 4  err: 0  ns2: 100000  SER: 0
+SER: 0.694444 0.492611 0.137931 0.00253646 0 0 0 0 0 0 
+
+
+********** 16-ary PSK **********
+Eb/N0 (dB): 0  err: 100  ns2: 112  SER: 0.892857
+Eb/N0 (dB): 1  err: 100  ns2: 147  SER: 0.680272
+Eb/N0 (dB): 2  err: 100  ns2: 468  SER: 0.213675
+Eb/N0 (dB): 3  err: 100  ns2: 52586  SER: 0.00190165
+Eb/N0 (dB): 4  err: 0  ns2: 100000  SER: 0
+SER: 0.892857 0.680272 0.213675 0.00190165 0 0 0 0 0 0 
+
+
+********** 2-ary QAM **********
+Eb/N0 (dB): 0  err: 100  ns2: 649  SER: 0.154083
+Eb/N0 (dB): 1  err: 100  ns2: 949  SER: 0.105374
+Eb/N0 (dB): 2  err: 100  ns2: 1887  SER: 0.0529942
+Eb/N0 (dB): 3  err: 100  ns2: 4382  SER: 0.0228206
+Eb/N0 (dB): 4  err: 100  ns2: 16089  SER: 0.00621543
+Eb/N0 (dB): 5  err: 81  ns2: 100000  SER: 0.00081
+Eb/N0 (dB): 6  err: 0  ns2: 100000  SER: 0
+SER: 0.154083 0.105374 0.0529942 0.0228206 0.00621543 0.00081 0 0 0 0 
+
+
+********** 4-ary QAM **********
+Eb/N0 (dB): 0  err: 100  ns2: 247  SER: 0.404858
+Eb/N0 (dB): 1  err: 100  ns2: 452  SER: 0.221239
+Eb/N0 (dB): 2  err: 100  ns2: 1300  SER: 0.0769231
+Eb/N0 (dB): 3  err: 100  ns2: 24000  SER: 0.00416667
+Eb/N0 (dB): 4  err: 0  ns2: 100000  SER: 0
+SER: 0.404858 0.221239 0.0769231 0.00416667 0 0 0 0 0 0 
+
+
+********** 8-ary QAM **********
+Eb/N0 (dB): 0  err: 100  ns2: 146  SER: 0.684932
+Eb/N0 (dB): 1  err: 100  ns2: 223  SER: 0.44843
+Eb/N0 (dB): 2  err: 100  ns2: 818  SER: 0.122249
+Eb/N0 (dB): 3  err: 100  ns2: 69568  SER: 0.00143744
+Eb/N0 (dB): 4  err: 0  ns2: 100000  SER: 0
+SER: 0.684932 0.44843 0.122249 0.00143744 0 0 0 0 0 0 
+
+
+********** 16-ary QAM **********
+Eb/N0 (dB): 0  err: 100  ns2: 119  SER: 0.840336
+Eb/N0 (dB): 1  err: 100  ns2: 193  SER: 0.518135
+Eb/N0 (dB): 2  err: 100  ns2: 1550  SER: 0.0645161
+Eb/N0 (dB): 3  err: 0  ns2: 100000  SER: 0
+SER: 0.840336 0.518135 0.0645161 0 0 0 0 0 0 0 
+
